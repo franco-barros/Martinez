@@ -1,0 +1,173 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.logoLayer {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 48%;
+  max-height: 420px;
+  min-height: 180px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.logoInner {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.content {
+  text-align: center;
+  color: #ffffff;
+  background: rgba(25, 35, 63, 0.95);
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 640px;
+  margin-bottom: 2rem;
+  z-index: 2;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.title {
+  font-family: var(--font-raleway) !important;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-inter) !important;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.4;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.12s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.99);
+}
+
+.btnPrimary {
+  background-color: #c7ae7d;
+  color: #19233f;
+}
+
+.btnPrimary:hover {
+  background-color: #b79d6d;
+}
+
+@media (min-width: 1025px) {
+  .content {
+    max-width: 520px;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .logoLayer {
+    height: 42%;
+    max-height: 360px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 70vh;
+    padding: 1rem;
+    justify-content: flex-start;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .logoLayer {
+    height: 38vw;
+    max-height: 220px;
+    min-height: 120px;
+  }
+
+  .content {
+    max-width: 96%;
+    padding: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 360px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoLayer {
+    height: 40vw;
+    max-height: 180px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+}
