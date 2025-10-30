@@ -1,6 +1,6 @@
 .footer {
-  background-color: var(--footer-bg, #ffffff);
-  color: var(--footer-text, #0d1b38);
+  background-color: var(--pa-bg, #ffffff); /* fondo blanco */
+  color: var(--text-dark, #111111); /* texto principal oscuro */
   padding: 2rem 1.5rem;
   font-family: var(
     --font-inter,
@@ -32,19 +32,15 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--footer-title, #0d1b38);
+  color: var(--primary-red, #b81c1c); /* acento rojo */
   font-family: var(--font-raleway);
-}
-
-.iconGavel {
-  color: var(--accent-gold, #d4af37);
 }
 
 .subtitle {
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--footer-subtitle, #0d1b38);
-  border-bottom: 1px solid var(--accent-gold-light, #d4af3750);
+  color: var(--text-dark, #111111); /* texto secundario oscuro */
+  border-bottom: 1px solid rgba(184, 28, 28, 0.15); /* línea roja suave */
   padding-bottom: 0.2rem;
   margin-bottom: 0.5rem;
   font-family: var(--font-raleway);
@@ -53,7 +49,7 @@
 .description {
   font-size: 0.9rem;
   line-height: 1.4;
-  color: var(--footer-description, #1f2d5a);
+  color: var(--text-dark, #111111); /* texto gris/oscuro */
   font-family: var(--font-inter);
 }
 
@@ -76,7 +72,7 @@
   padding: 0;
   margin: 0;
   font: inherit;
-  color: var(--footer-link, #0d1b38);
+  color: var(--primary-red, #b81c1c); /* links rojos */
   cursor: pointer;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -84,7 +80,7 @@
 
 .list li a:hover,
 .linkButton:hover {
-  color: var(--accent-gold, #d4af37);
+  color: var(--pa-accent-2, #e50914); /* rojo más intenso al hover */
   text-decoration: underline;
 }
 
@@ -93,13 +89,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid var(--footer-border, rgba(13, 27, 56, 0.15));
+  border-top: 1px solid rgba(184, 28, 28, 0.15); /* línea sutil roja */
   padding-top: 1rem;
 }
 
 .copy {
   font-size: 0.8rem;
-  color: var(--footer-copy, #0d1b38);
+  color: var(--text-dark, #111111); /* texto oscuro */
   text-align: center;
   width: 100%;
   font-family: var(--font-inter);

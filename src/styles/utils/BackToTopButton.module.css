@@ -2,12 +2,12 @@
   position: fixed;
   bottom: 0.55rem;
   left: 0.55rem;
-  background: linear-gradient(135deg, #c7ae7d 0%, #d4b883 50%, #e0cda5 100%);
-  color: #19233f;
+  background: linear-gradient(135deg, #e50914 0%, #b3000d 50%, #99000b 100%);
+  color: #ffffff;
   padding: 0.75rem;
   border: none;
   border-radius: 50%;
-  box-shadow: 0 4px 14px rgba(25, 35, 63, 0.3);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
   z-index: 10000;
   display: flex;
   align-items: center;
@@ -19,12 +19,12 @@
 }
 
 .backToTopButton:hover {
-  background: linear-gradient(135deg, #d4b883 0%, #c7ae7d 50%, #b79d6d 100%);
+  background: linear-gradient(135deg, #b3000d 0%, #e50914 50%, #cc000f 100%);
   transform: scale(1.1);
 }
 
 .icon {
   font-size: 24px;
   pointer-events: none;
-  color: #19233f;
+  color: #ffffff;
 }

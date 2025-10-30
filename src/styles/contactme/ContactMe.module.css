@@ -1,8 +1,22 @@
 .contactSection {
+  position: relative;
   padding: 4rem 1.5rem;
-  background-color: var(--primary-blue, #19233f);
+  background-color: var(--dark-bg, #1a1a1a);
   color: var(--text-light, #fff);
   text-align: center;
+}
+
+.contactSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  clip-path: polygon(0 0%, 65% 101%, 100% 0%);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .badgeWrapper {
@@ -17,13 +31,13 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, #c7ae7d 0%, #d4b883 50%, #e0cda5 100%);
+  background: linear-gradient(135deg, #b81c1c 0%, #ff4d4d 50%, #e50914 100%);
   border-radius: 9999px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   font-family: var(--font-raleway);
   font-weight: 700;
-  color: #19233f;
+  color: var(--primary-red, #ffffff);
   margin: 0 auto 1rem;
   margin-top: 0.5rem;
 }
@@ -31,7 +45,7 @@
 .heading {
   font-size: 2.5rem;
   font-family: var(--font-raleway);
-  color: var(--accent-gold, #c7ae7d);
+  color: var(--primary-red, #ffffff);
   margin-bottom: 0.5rem;
   text-align: center;
   font-weight: 700;
@@ -41,7 +55,7 @@
   font-size: 1.1rem;
   font-family: var(--font-inter);
   font-weight: 400;
-  color: var(--text-light-alt, #e0d6b9);
+  color: var(--text-dark, #d9d9d9);
   margin-bottom: 2.5rem;
   text-align: center;
 }
@@ -57,11 +71,11 @@
 }
 
 .card {
-  background-color: var(--card-bg, #ffffff);
+  background-color: var(--dark-bg, #222222);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
   padding: 2rem;
-  color: var(--primary-blue, #19233f);
+  color: var(--text-light, #ffffff);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -75,7 +89,7 @@
   font-size: 1.5rem;
   font-family: var(--font-raleway);
   font-weight: 700;
-  color: var(--accent-gold, #c7ae7d);
+  color: var(--text-light, #ffffff);
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
@@ -84,12 +98,12 @@
 .socialCard .cardTitle {
   justify-content: center;
   text-decoration: underline;
-  text-decoration-color: var(--accent-gold, #c7ae7d);
+  text-decoration-color: var(--primary-red, #b81c1c);
   text-underline-offset: 6px;
 }
 
 .contactInfo {
-  color: var(--primary-blue, #19233f);
+  color: var(--text-light, #d9d9d9);
   font-size: 1rem;
   line-height: 1.4;
   display: flex;
@@ -99,7 +113,7 @@
 }
 
 .infoTitle {
-  color: var(--accent-gold, #c7ae7d);
+  color: var(--primary-red, #b81c1c);
   font-weight: 700;
   margin-top: 0.8rem;
   margin-bottom: 0.2rem;
@@ -122,9 +136,9 @@
 .textAreaField {
   padding: 0.9rem 1rem;
   border-radius: 8px;
-  border: 1px solid var(--accent-gold, #c7ae7d);
+  border: 1px solid var(--primary-red, #b81c1c);
   background-color: transparent;
-  color: var(--primary-blue, #19233f);
+  color: var(--text-light, #ffffff);
   font-size: 1rem;
   font-family: var(--font-inter);
   font-weight: 400;
@@ -133,8 +147,8 @@
 .inputField:focus,
 .textAreaField:focus {
   outline: none;
-  border-color: #e6cf9c;
-  background-color: rgba(199, 174, 125, 0.15);
+  border-color: #ff4d4d;
+  background-color: rgba(184, 28, 28, 0.15);
 }
 
 .textAreaField {
@@ -143,8 +157,8 @@
 }
 
 .submitButton {
-  background-color: var(--accent-gold, #c7ae7d);
-  color: var(--primary-blue, #19233f);
+  background-color: var(--primary-red, #b81c1c);
+  color: var(--primary-red-bg, #ffffff);
   font-size: 1.1rem;
   font-family: var(--font-raleway);
   font-weight: 600;
@@ -157,7 +171,7 @@
 }
 
 .submitButton:hover {
-  background-color: #b89b64;
+  background-color: #ff4d4d;
 }
 
 .socialCardWrapper {
@@ -167,13 +181,13 @@
 }
 
 .socialCard {
-  background-color: var(--card-bg, #ffffff);
-  color: var(--primary-blue, #19233f);
+  background-color: var(--dark-bg, #222222);
+  color: var(--text-light, #ffffff);
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
   max-width: 480px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
   font-family: var(--font-inter);
 }
 
@@ -198,19 +212,19 @@
   text-decoration: none;
   font-family: var(--font-raleway);
   font-weight: 700;
-  background: linear-gradient(135deg, #c7ae7d, #e6cf9c);
-  color: var(--primary-blue, #19233f);
+  background: linear-gradient(135deg, #b81c1c, #ff4d4d);
+  color: var(--text-light, #ffffff);
   border: 1px solid transparent;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .socialButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
 }
 
 .socialButton:focus-visible {
-  outline: 2px solid #e6cf9c;
+  outline: 2px solid #ff4d4d;
   outline-offset: 2px;
 }
 
@@ -257,7 +271,7 @@
 
 .spinner {
   border: 3px solid rgba(255, 255, 255, 0.3);
-  border-top: 3px solid #19233f;
+  border-top: 3px solid var(--dark-bg, #1a1a1a);
   border-radius: 50%;
   width: 18px;
   height: 18px;

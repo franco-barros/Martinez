@@ -1,11 +1,40 @@
 .practiceAreasSection {
+  position: relative;
+  overflow: hidden;
+  --pa-bg: #ffffff;
+  --pa-text: #111111;
+  --pa-accent-1: #e50914;
+  --pa-accent-2: #b40610;
+  --pa-accent-3: #660000;
+  --pa-accent-soft: rgba(229, 9, 20, 0.08);
+  --pa-accent-border: rgba(229, 9, 20, 0.15);
+  --pa-card-shadow: rgba(0, 0, 0, 0.08);
+
   padding: 2rem 1rem;
+  background-color: var(--pa-bg);
+  color: var(--pa-text);
+}
+
+.practiceAreasSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  background-color: #1a1a1a;
+  clip-path: polygon(0 0%, 35% 100%, 100% 0%);
+  z-index: 1;
+  pointer-events: none;
+  transform: translateZ(0);
 }
 
 .badgeWrapper {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .badge {
@@ -13,25 +42,23 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: var(
-    --badge-gradient,
-    linear-gradient(135deg, #c7ae7d 0%, #d4b883 50%, #e0cda5 100%)
-  );
+  background: linear-gradient(135deg, #b81c1c 0%, #ff4d4d 50%, #e50914 100%);
   border-radius: 9999px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  font-weight: 600;
-  color: var(--primary-blue, #19233f);
+  font-family: var(--font-raleway);
+  font-weight: 700;
+  color: var(--primary-red, #ffffff);
   margin: 0 auto 1rem;
-  box-shadow: 0 6px 18px rgba(199, 174, 125, 0.12);
+  margin-top: 0.5rem;
 }
 
 .description {
   text-align: center;
   max-width: 720px;
   margin: 0 auto 2rem;
-  color: rgba(25, 35, 63, 0.85);
-  line-height: 1.5;
+  color: #333;
+  line-height: 1.6;
   font-size: 1rem;
 }
 
@@ -41,9 +68,11 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  background-color: rgba(25, 35, 63, 0.05);
+  background-color: var(--pa-accent-soft);
   border-radius: 25px;
   margin: 0 auto 0.75rem;
+  border: 1px solid rgba(229, 9, 20, 0.25);
+  color: var(--pa-accent-1);
 }
 
 .sliderMobile {
@@ -71,27 +100,37 @@
 }
 
 .areaCard {
-  background: #ffffff;
+  background: #f9f9f9;
   border-radius: 12px;
-  border: 1px solid var(--card-border, rgba(25, 35, 63, 0.06));
+  border: 1px solid var(--pa-accent-border);
   padding: 1.25rem;
-  box-shadow: 0 6px 20px rgba(25, 35, 63, 0.04);
-  transition: transform 0.18s ease;
+  box-shadow: 0 6px 16px var(--pa-card-shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .areaCard:hover {
   transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(229, 9, 20, 0.2);
 }
 
 .areaCard h4 {
-  color: var(--primary-blue, #19233f);
+  color: var(--pa-accent-1);
   font-weight: 700;
   margin-bottom: 0.75rem;
   font-size: 1.1rem;
 }
 
 .areaCard p {
-  color: rgba(25, 35, 63, 0.85);
+  color: #333;
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .practiceAreasSection::before {
+    height: 40px;
+    clip-path: polygon(0 0%, 40% 100%, 100% 0%);
+  }
 }

@@ -6,13 +6,13 @@ import { FadeInOnScroll } from "../shared/fadeInonscroll";
 import {
   FaInfoCircle,
   FaEnvelopeOpenText,
-  FaMapMarkerAlt,
   FaPhoneAlt,
-  FaEnvelope,
+  FaWhatsapp,
   FaInstagram,
   FaFacebook,
+  FaMapMarkerAlt,
+  FaEnvelope,
 } from "react-icons/fa";
-import toast, { Toaster } from "react-hot-toast";
 
 const ContactMe: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -21,50 +21,23 @@ const ContactMe: React.FC = () => {
     message: "",
   });
 
-  const [loading, setLoading] = useState(false);
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setLoading(true);
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        toast.error(data.error || "Error al enviar el mensaje.");
-        return;
-      }
-
-      toast.success("Mensaje enviado con éxito");
-      setFormData({ name: "", email: "", message: "" });
-    } catch (err) {
-      toast.error("Error en el servidor. Intenta de nuevo más tarde.");
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
+    setFormData({ name: "", email: "", message: "" });
+    alert("Formulario enviado (simulación)");
   };
 
   return (
     <section id="contact" className={styles.contactSection}>
-      {/* 📌 Contenedor de notificaciones */}
-      <Toaster position="top-center" reverseOrder={false} />
-
       <FadeInOnScroll>
         <div className={styles.badgeWrapper}>
-          <div className={styles.badge}>@ Contacto </div>
+          <div className={styles.badge}>@ Contacto</div>
         </div>
 
         <p className={styles.subHeading}>
@@ -85,23 +58,26 @@ const ContactMe: React.FC = () => {
               <FaMapMarkerAlt style={{ marginRight: "0.5rem" }} />
               Dirección
             </h4>
-            <p>Santa Fe 110 (o)</p>
-            <p>San Juan, Argentina</p>
+            <p>Calle Falsa 123</p>
+            <p>Ciudad Ejemplo, País Ficticio</p>
 
             <h4 className={styles.infoTitle}>
               <FaPhoneAlt style={{ marginRight: "0.5rem" }} />
               Teléfonos
             </h4>
-            <p>2644769484</p>
+            <p>
+              <FaWhatsapp style={{ marginRight: "0.5rem" }} />
+              264-417-1075
+            </p>
 
             <h4 className={styles.infoTitle}>
               <FaEnvelope style={{ marginRight: "0.5rem" }} />
               Correo
             </h4>
-            <p>juridicotascheretvidela@gmail.com</p>
+            <p>contacto@ficticio.com</p>
           </div>
 
-          {/* Tarjeta con formulario */}
+          {/* Tarjeta con formulario (solo maqueta) */}
           <form
             onSubmit={handleSubmit}
             className={`${styles.card} ${styles.contactForm}`}
@@ -117,7 +93,6 @@ const ContactMe: React.FC = () => {
               placeholder="Tu Nombre"
               value={formData.name}
               onChange={handleChange}
-              required
               className={styles.inputField}
             />
             <input
@@ -126,7 +101,6 @@ const ContactMe: React.FC = () => {
               placeholder="Tu Correo"
               value={formData.email}
               onChange={handleChange}
-              required
               className={styles.inputField}
             />
             <textarea
@@ -134,16 +108,10 @@ const ContactMe: React.FC = () => {
               placeholder="Tu Mensaje"
               value={formData.message}
               onChange={handleChange}
-              required
               className={styles.textAreaField}
             />
-            <button
-              type="submit"
-              className={styles.submitButton}
-              disabled={loading}
-            >
-              {loading && <span className={styles.spinner}></span>}
-              {loading ? "Enviando..." : "Enviar Mensaje"}
+            <button type="submit" className={styles.submitButton}>
+              Enviar Mensaje
             </button>
           </form>
         </div>
@@ -153,10 +121,10 @@ const ContactMe: React.FC = () => {
         <div className={styles.socialCardWrapper}>
           <div className={`${styles.card} ${styles.socialCard}`}>
             <h3 className={styles.cardTitle}>Seguinos en nuestras redes</h3>
-            <p>Mantenete informado con nuestras novedades y contenido legal.</p>
+            <p>Mantenete informado con nuestras novedades.</p>
             <div className={styles.socialButtons}>
               <a
-                href="https://www.instagram.com/tascheretvidela.juridico/"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${styles.socialButton} ${styles.instagramButton}`}
@@ -165,7 +133,7 @@ const ContactMe: React.FC = () => {
                 Instagram
               </a>
               <a
-                href="https://www.facebook.com/share/1BCYBUXbV8/?mibextid=wwXIfr"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${styles.socialButton} ${styles.facebookButton}`}

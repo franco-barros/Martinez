@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { usePathname } from "next/navigation";
 import styles from "../../styles/Footer.module.css";
 
@@ -21,7 +20,7 @@ const Footer = () => {
   const sections = [
     { id: "hero", label: "Inicio" },
     { id: "aboutus", label: "Sobre Nosotros" },
-    { id: "faq", label: "Preguntas Frecuentes" },
+    { id: "contactme", label: "Contacto" },
   ];
 
   return (
@@ -29,8 +28,9 @@ const Footer = () => {
       <div className={styles.content}>
         <div className={styles.section}>
           <p className={styles.description}>
-            Brindamos asesoría y defensa legal especializada en derecho laboral
-            y civil con compromiso, experiencia y ética profesional.
+            Brindamos asesoramiento contable profesional para decisiones
+            financieras seguras y eficientes, adaptadas a tus necesidades
+            personales o de tu empresa.
           </p>
         </div>
 
@@ -56,7 +56,8 @@ const Footer = () => {
 
       <div className={styles.bottomBar}>
         <p className={styles.copy}>
-          © 2025 Tascheret - Videla | Todos los derechos reservados.
+          © 2025 Paula Martínez Contadora Pública | Todos los derechos
+          reservados.
         </p>
       </div>
     </footer>

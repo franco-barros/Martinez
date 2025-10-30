@@ -1,27 +1,38 @@
 .aboutSection {
-  --primary-blue: #19233f;
-  --accent-gold: #c7ae7d;
-  --badge-gradient: linear-gradient(
-    135deg,
-    #c7ae7d 0%,
-    #d4b883 50%,
-    #e0cda5 100%
-  );
-  --card-border: rgba(25, 35, 63, 0.06);
-
-  padding: 4rem 1rem;
-  background-color: #fff;
-  max-width: 1200px;
-  margin: 0 auto;
+  --primary-red: #ffffff;
+  --dark-bg: #1a1a1a;
+  --text-dark: #19233f;
+  --text-light: #b81c1c;
+  --card-shadow: rgba(0, 0, 0, 0.15);
+  position: relative;
+  padding: 5rem 1rem;
+  background-color: var(--dark-bg);
+  width: 100vw;
+  margin: 0;
   font-family: var(--font-inter);
-  font-weight: 400;
-  color: var(--foreground);
+  color: var(--text-dark);
+  overflow: hidden;
+}
+
+.aboutSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  clip-path: polygon(0 0, 65% 100%, 100% 0);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .badgeWrapper {
   text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 .badge {
@@ -29,36 +40,97 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: var(--badge-gradient);
+  background: linear-gradient(135deg, #b81c1c 0%, #ff4d4d 50%, #e50914 100%);
   border-radius: 9999px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   font-family: var(--font-raleway);
   font-weight: 700;
-  color: var(--primary-blue);
+  color: var(--primary-red, #ffffff);
   margin: 0 auto 1rem;
-  box-shadow: 0 6px 18px rgba(199, 174, 125, 0.12);
+  z-index: 2;
+  position: relative;
 }
 
 .descriptionCard {
   background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  border: 1px solid rgba(25, 35, 63, 0.08);
+  box-shadow: 0 8px 22px var(--card-shadow);
   max-width: 900px;
-  margin: 0 auto 3rem auto;
-  color: var(--primary-blue);
-  text-align: center;
-  font-family: var(--font-inter);
-  line-height: 1.6;
-  font-weight: 400;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
-.subTitle {
-  font-size: 1.5rem;
-  color: var(--primary-blue);
-  font-family: var(--font-raleway);
-  font-weight: 700;
+.descriptionCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+}
+
+.imageWrapper {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+  position: relative;
+}
+
+.infoWrapper {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.textWrapper {
   margin-bottom: 1.5rem;
-  text-align: center;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .descriptionCard {
+    flex-direction: column;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    max-width: 100%;
+    height: 250px;
+    border-radius: 16px 16px 0 0;
+    flex: none;
+  }
+
+  .infoWrapper {
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+
+  .aboutSection::before {
+    height: 40px;
+    top: 0;
+  }
 }

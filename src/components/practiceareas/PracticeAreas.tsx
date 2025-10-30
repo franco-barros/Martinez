@@ -4,14 +4,12 @@ import React, { useState, useEffect } from "react";
 import styles from "../../styles/practicearea/PracticeAreas.module.css";
 import {
   Layers,
-  FileText,
-  Users,
-  Rocket,
-  CreditCard,
-  Shield,
   Briefcase,
-  Cpu,
-  Mountain,
+  Users,
+  FileText,
+  Rocket,
+  Calculator,
+  TrendingUp,
 } from "lucide-react";
 import PracticeAreasMobile from "./practiceareasmobile";
 import { FadeInOnScroll } from "../shared/fadeInonscroll";
@@ -26,65 +24,45 @@ interface PracticeArea {
 const practiceAreas: PracticeArea[] = [
   {
     id: "1",
-    title: "Derecho Societario",
+    title: "Asesoría impositiva y contable",
     description:
-      "Ingeniería Jurídica para Empresas; Armado de grupos societarios; Holding societario, Estatutos, Convenio de accionistas; Due Diligence legal para empresas.",
+      "Alta de Monotributo, Responsable Inscripto y análisis de ventajas y desventajas de cada situación. Presentación de declaraciones juradas y recategorizaciones. Asesoramiento y gestión impositiva integral para personas físicas y jurídicas. Defensa ante organismos de fiscalización nacionales y provinciales. Planificación fiscal para una gestión más ordenada y sostenible. Control de documentación contable y cumplimiento normativo. Análisis de informes contables y económicos.",
     icon: <Briefcase size={28} />,
   },
   {
     id: "2",
-    title: "Contrataciones / Redacción de Instrumentos - Reglamentos",
+    title: "Gestión Laboral",
     description:
-      "Civiles, Comerciales, Colaboración Empresaria, Fideicomisos, Negociaciones, Compliance, Códigos de Ética, Reglamentos.",
-    icon: <FileText size={28} />,
-  },
-  {
-    id: "3",
-    title: "Consultoría de Empresas Familiares",
-    description:
-      "Protocolos Familiares; Armado de Estructuras de Gobierno Corporativo; Planificación sucesoria, Planificación Patrimonial.",
+      "Altas y bajas de personal, liquidación de sueldos y asesoramiento en normativa laboral. Proceso de selección de personal, entrevistas e inducción. Diseño de procesos administrativos, organigramas y manuales de funciones. Optimización de la gestión interna y coordinación entre áreas.",
     icon: <Users size={28} />,
   },
   {
-    id: "4",
-    title: "Emprendedores y Startups",
+    id: "3",
+    title: "Certificaciones Contables",
     description:
-      "Asesoramiento en nuevos negocios, abc legal para emprender; Matriz de Riesgo del proyecto, Convenio con Inversores, Rondas de Inversión.",
+      "Elaboración y emisión de certificaciones contables y laborales. Informes para organismos públicos, entidades financieras o particulares.",
+    icon: <FileText size={28} />,
+  },
+  {
+    id: "4",
+    title: "Asesoría en Inicio de Negocios",
+    description:
+      "Asistencia integral para emprendedores y nuevas empresas. Orientación en la elección de estructuras legales, planificación fiscal y gestión administrativa inicial.",
     icon: <Rocket size={28} />,
   },
   {
     id: "5",
-    title: "Cobranzas",
+    title: "Gestión Financiera y Presupuestaria",
     description:
-      "Gestión y administración de cartera de cobranzas (preventiva, extrajudicial y judicial).",
-    icon: <CreditCard size={28} />,
+      "Elaboración y control de presupuestos, análisis de flujo de caja y planificación de inversiones. Implementación de estrategias para mejorar la rentabilidad y optimizar los recursos financieros de tu negocio.",
+    icon: <Calculator size={28} />,
   },
   {
     id: "6",
-    title: "Propiedad Intelectual",
-    description: "Registro de Marcas y Patentes.",
-    icon: <Shield size={28} />,
-  },
-  {
-    id: "7",
-    title: "Derecho Laboral para Empresas",
+    title: "Consultoría Estratégica Empresarial",
     description:
-      "«Siempre del lado de la Empresa” Asesoramiento laboral preventivo; en cuestiones ordinarias de Derecho Laboral Individual y Colectivo. Negociaciones extrajudiciales y representación en litigios laborales.",
-    icon: <Briefcase size={28} />,
-  },
-  {
-    id: "8",
-    title: "Derecho y Nuevas Tecnologías",
-    description:
-      "Amplia experiencia en asesoramiento de empresas de base tecnológica y actividades de la economía del conocimiento. Asesoramiento en normativa de protección de datos. Redacción de contratos, avisos legales y acuerdos de confidencialidad.",
-    icon: <Cpu size={28} />,
-  },
-  {
-    id: "9",
-    title: "Derecho Minero",
-    description:
-      "Asesoramiento de empresas mineras dedicadas a la exploración y explotación de emprendimientos mineros.",
-    icon: <Mountain size={28} />,
+      "Análisis integral del funcionamiento del negocio, detección de oportunidades de mejora y acompañamiento en la toma de decisiones clave. Planificación estratégica para el crecimiento sostenible de la empresa.",
+    icon: <TrendingUp size={28} />,
   },
 ];
 
@@ -112,14 +90,14 @@ const PracticeAreas: React.FC = () => {
         <div className={styles.badgeWrapper}>
           <span className={styles.badge}>
             <Layers size={18} style={{ marginRight: "0.4rem" }} />
-            Áreas de Práctica
+            Nuestros servicios
           </span>
         </div>
 
         <p className={styles.description}>
-          Combinamos innovación, ética y un enfoque personalizado para ofrecer
-          un servicio de soluciones jurídicas integrales a empresas y
-          emprendedores.
+          Brindo asesoramiento integral en materia impositiva, contable, laboral
+          y empresarial, adaptado a las necesidades de cada cliente —ya sea
+          emprendedor, profesional o empresa consolidada.
         </p>
       </FadeInOnScroll>
 

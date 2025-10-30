@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import ImageCarousel from "../imagecarrousel";
 import styles from "../../styles/hero/Hero.module.css";
 
 const Hero: React.FC = () => {
@@ -13,28 +13,25 @@ const Hero: React.FC = () => {
 
   return (
     <section id="hero" className={styles.hero}>
-      <div className={styles.logoLayer}>
-        <div className={styles.logoInner}>
-          <Image
-            src="/icons/LogoversiónC-4.png"
-            alt="Logo Tascheret - Videla"
-            fill
-            sizes="(max-width: 480px) 80vw, (max-width: 768px) 70vw, 1000px"
-            priority
-            style={{ objectFit: "contain" }}
-          />
-        </div>
-      </div>
+      {/* Carousel de fondo */}
+      <ImageCarousel />
 
+      {/* Overlay oscuro */}
+      <div className={styles.overlay}></div>
+
+      {/* Contenido del Hero */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className={styles.content}
       >
-        <h1 className={styles.title}>
-          Te acompañamos en cada paso para defender tus derechos.
-        </h1>
+        <h1 className={styles.title}>Paula Martínez</h1>
+        <h2 className={styles.subtitle}>Contadora Pública</h2>
+
+        <p className={styles.description}>
+          Asesoramiento contable para decisiones seguras y eficientes.
+        </p>
 
         <div className={styles.buttons}>
           <button

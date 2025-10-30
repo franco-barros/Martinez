@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { createPortal } from "react-dom";
-import { Scale } from "lucide-react";
+import { Calculator } from "lucide-react";
 import styles from "../../../styles/animations/AnimatedMenuOverlay.module.css";
 
 interface AnimatedMenuOverlayProps {
@@ -56,7 +56,9 @@ const AnimatedMenuOverlay: React.FC<AnimatedMenuOverlayProps> = ({
                   isActive ? styles.activeItem : ""
                 }`}
               >
-                {isActive && <Scale size={18} className={styles.activeIcon} />}{" "}
+                {isActive && (
+                  <Calculator size={18} className={styles.activeIcon} />
+                )}{" "}
                 {label}
               </button>
             );
