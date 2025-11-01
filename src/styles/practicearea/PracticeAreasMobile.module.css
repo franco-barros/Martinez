@@ -2,6 +2,7 @@
   display: block;
   width: 100%;
   overflow: hidden;
+  padding-bottom: 1.5rem;
 }
 
 .keen-slider__slide {
@@ -9,41 +10,68 @@
   max-width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0 0.5rem;
 }
 
-.sliderMobile .areaCard {
+.areaCard {
   width: 90%;
   border-radius: 25px;
   padding: 1.5rem;
-  margin: 0 auto;
   box-shadow: 0 4px 16px rgba(25, 35, 63, 0.08);
+  background: #fff;
   transition: transform 0.18s ease;
 }
 
-.sliderMobile .areaCard:hover {
+.areaCard:hover {
   transform: translateY(-2px);
 }
 
-.sliderMobile .iconWrapper {
-  width: 48px;
-  height: 48px;
-  border-radius: 25px;
-  margin: 0 auto 0.75rem;
+.iconWrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(25, 35, 63, 0.05);
+  background-color: rgba(25, 35, 63, 0.06);
 }
 
-.sliderMobile .areaCard h4 {
+.areaCard h4 {
   text-align: center;
-  font-size: 1.05rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #19233f;
+  margin-bottom: 0.75rem;
 }
 
-.sliderMobile .areaCard p {
-  text-align: center;
+.itemList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.itemList li {
   font-size: 0.95rem;
+  color: #3a3a3a;
   line-height: 1.5;
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 2rem; /* más espacio para el círculo */
+}
+
+.itemList li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: rgba(184, 28, 28, 0.1); /* fondo suave */
+  font-weight: bold;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

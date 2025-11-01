@@ -20,7 +20,7 @@ const Footer = () => {
   const sections = [
     { id: "hero", label: "Inicio" },
     { id: "aboutus", label: "Sobre Nosotros" },
-    { id: "contactme", label: "Contacto" },
+    { id: "contact", label: "Contacto" },
   ];
 
   return (

@@ -8,7 +8,7 @@ import styles from "../../../styles/practicearea/PracticeAreasMobile.module.css"
 interface PracticeArea {
   id: string;
   title: string;
-  description: string;
+  items: string[];
   icon?: React.ReactNode;
 }
 
@@ -20,11 +20,6 @@ const PracticeAreasMobile: React.FC<Props> = ({ practiceAreas }) => {
   const [sliderRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     slides: { perView: 1, spacing: 16 },
-    breakpoints: {
-      "(min-width: 768px)": {
-        slides: { perView: 1, spacing: 16 },
-      },
-    },
   });
 
   return (
@@ -37,7 +32,11 @@ const PracticeAreasMobile: React.FC<Props> = ({ practiceAreas }) => {
         >
           {area.icon && <div className={styles.iconWrapper}>{area.icon}</div>}
           <h4>{area.title}</h4>
-          <p>{area.description}</p>
+          <ul className={styles.itemList}>
+            {area.items.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
         </article>
       ))}
     </div>
