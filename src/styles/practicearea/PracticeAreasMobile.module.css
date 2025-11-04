@@ -68,7 +68,7 @@
   width: 1.2rem;
   height: 1.2rem;
   border-radius: 50%;
-  background-color: rgba(184, 28, 28, 0.1); /* fondo suave */
+  background-color: rgba(184, 28, 28, 0.1);
   font-weight: bold;
   font-size: 0.8rem;
   display: flex;

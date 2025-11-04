@@ -1,6 +1,6 @@
 .footer {
-  background-color: var(--pa-bg, #ffffff); /* fondo blanco */
-  color: var(--text-dark, #111111); /* texto principal oscuro */
+  background-color: var(--pa-bg, #ffffff);
+  color: var(--text-dark, #111111);
   padding: 2rem 1.5rem;
   font-family: var(
     --font-inter,
@@ -32,15 +32,15 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--primary-red, #b81c1c); /* acento rojo */
+  color: var(--primary-red, #b81c1c);
   font-family: var(--font-raleway);
 }
 
 .subtitle {
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--text-dark, #111111); /* texto secundario oscuro */
-  border-bottom: 1px solid rgba(184, 28, 28, 0.15); /* línea roja suave */
+  color: var(--text-dark, #111111);
+  border-bottom: 1px solid rgba(184, 28, 28, 0.15);
   padding-bottom: 0.2rem;
   margin-bottom: 0.5rem;
   font-family: var(--font-raleway);
@@ -49,7 +49,7 @@
 .description {
   font-size: 0.9rem;
   line-height: 1.4;
-  color: var(--text-dark, #111111); /* texto gris/oscuro */
+  color: var(--text-dark, #111111);
   font-family: var(--font-inter);
 }
 
@@ -72,7 +72,7 @@
   padding: 0;
   margin: 0;
   font: inherit;
-  color: var(--primary-red, #b81c1c); /* links rojos */
+  color: var(--primary-red, #b81c1c);
   cursor: pointer;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -80,7 +80,7 @@
 
 .list li a:hover,
 .linkButton:hover {
-  color: var(--pa-accent-2, #e50914); /* rojo más intenso al hover */
+  color: var(--pa-accent-2, #e50914);
   text-decoration: underline;
 }
 
@@ -89,13 +89,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid rgba(184, 28, 28, 0.15); /* línea sutil roja */
+  border-top: 1px solid rgba(184, 28, 28, 0.15);
   padding-top: 1rem;
 }
 
 .copy {
   font-size: 0.8rem;
-  color: var(--text-dark, #111111); /* texto oscuro */
+  color: var(--text-dark, #111111);
   text-align: center;
   width: 100%;
   font-family: var(--font-inter);
