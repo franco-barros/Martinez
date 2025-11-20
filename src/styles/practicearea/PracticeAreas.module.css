@@ -1,14 +1,16 @@
 .practiceAreasSection {
   position: relative;
   overflow: hidden;
-  --pa-bg: #ffffff;
-  --pa-text: #111111;
-  --pa-accent-1: #e50914;
-  --pa-accent-2: #b40610;
-  --pa-accent-3: #660000;
-  --pa-accent-soft: rgba(229, 9, 20, 0.08);
-  --pa-accent-border: rgba(229, 9, 20, 0.15);
-  --pa-card-shadow: rgba(0, 0, 0, 0.08);
+
+  /* 🎨 Nueva paleta unificada */
+  --pa-bg: #114137; /* fondo verde oscuro */
+  --pa-text: #000; /* texto negro */
+  --pa-gold-1: #8d6b24; /* dorado fuerte */
+  --pa-gold-2: #b89b63; /* dorado medio */
+  --pa-gold-3: #c7ae7d; /* dorado claro */
+  --pa-soft: rgba(255, 255, 255, 0.1);
+  --pa-soft-border: rgba(255, 255, 255, 0.18);
+  --pa-card-shadow: rgba(0, 0, 0, 0.18);
 
   padding: 2rem 1rem;
   background-color: var(--pa-bg);
@@ -22,8 +24,22 @@
   left: 0;
   width: 100%;
   height: 55px;
-  background-color: #1a1a1a;
+  background-color: var(--pa-gold-3);
   clip-path: polygon(0 0%, 35% 100%, 100% 0%);
+  z-index: 1;
+  pointer-events: none;
+  transform: translateZ(0);
+}
+
+.practiceAreasSection::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  background-color: var(--pa-gold-3);
+  clip-path: polygon(0 100%, 35% 0%, 100% 100%);
   z-index: 1;
   pointer-events: none;
   transform: translateZ(0);
@@ -43,22 +59,30 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, #b81c1c 0%, #ff4d4d 50%, #e50914 100%);
+
+  background: linear-gradient(
+    135deg,
+    #8d6b24 0%,
+    #b89b63 25%,
+    #b89b63 50%,
+    #c7ae7d 75%,
+    #8d6b24 100%
+  );
+
   border-radius: 9999px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   font-family: var(--font-raleway);
   font-weight: 700;
-  color: #fff;
   margin: 0 auto 1rem;
-  margin-top: 0.5rem;
 }
 
+/* --- Descripción --- */
 .description {
   text-align: center;
   max-width: 720px;
   margin: 0 auto 2rem;
-  color: #333;
+  color: var(--pa-gold-3);
   line-height: 1.6;
   font-size: 1rem;
 }
@@ -89,11 +113,11 @@
 }
 
 .areaCard {
-  background: #f9f9f9;
+  background: var(--pa-gold-3);
   border-radius: 14px;
-  border: 1px solid var(--pa-accent-border);
+  border: 1px solid var(--pa-soft-border);
   padding: 1.5rem 1.25rem;
-  box-shadow: 0 6px 16px var(--pa-card-shadow);
+  box-shadow: 0 6px 18px var(--pa-card-shadow);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
   position: relative;
   z-index: 2;
@@ -102,7 +126,7 @@
 
 .areaCard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 22px rgba(229, 9, 20, 0.25);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
 }
 
 /* --- Icono superior --- */
@@ -112,17 +136,17 @@
   justify-content: center;
   width: 52px;
   height: 52px;
-  background-color: var(--pa-accent-soft);
+  background-color: rgba(255, 255, 255, 0.12);
   border-radius: 18px;
   margin: 0 auto 0.9rem;
-  border: 1px solid rgba(229, 9, 20, 0.25);
-  color: var(--pa-accent-1);
-  box-shadow: 0 2px 6px rgba(229, 9, 20, 0.15);
+  border: 1px solid var(--pa-soft-border);
+  color: var(--pa-gold-1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
 }
 
 /* --- Título --- */
 .areaCard h4 {
-  color: var(--pa-accent-1);
+  color: var(--pa-gold-1);
   font-weight: 700;
   margin-bottom: 0.8rem;
   font-size: 1.15rem;
@@ -143,10 +167,10 @@
   margin-bottom: 0.55rem;
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #333;
+  color: #114137; /* buen contraste */
 }
 
-/* ✅ Esfera con el check */
+/* Check */
 .checkCircle {
   flex-shrink: 0;
   display: inline-flex;
@@ -155,13 +179,13 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background-color: rgba(229, 9, 20, 0.1);
-  color: var(--pa-accent-1);
-  border: 1px solid rgba(229, 9, 20, 0.25);
-  box-shadow: 0 1px 3px rgba(229, 9, 20, 0.15);
+  background-color: rgba(255, 255, 255, 0.12);
+  color: var(--pa-gold-1);
+  border: 1px solid var(--pa-soft-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
 }
 
-/* --- Responsividad --- */
+/* Responsivo */
 @media (max-width: 768px) {
   .practiceAreasSection::before {
     height: 40px;
