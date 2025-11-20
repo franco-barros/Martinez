@@ -11,7 +11,7 @@
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5;
-  color: #b81c1c;
+  color: #114137; /* verde profundo */
   overflow: hidden;
 }
 .hero .carousel {
@@ -56,12 +56,12 @@
 .content {
   text-align: center;
   background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(184, 28, 28, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08); /* borde suave */
   padding: 2rem 1.5rem;
   border-radius: 14px;
   max-width: 640px;
   margin: 2rem 0;
-  box-shadow: 0 6px 20px rgba(184, 28, 28, 0.25);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* sombra suave */
   z-index: 2;
   font-weight: 400;
 }
@@ -71,7 +71,7 @@
   font-weight: 800;
   font-size: 2.6rem;
   line-height: 1.2;
-  color: #b81c1c;
+  color: #c5a572; /* dorado */
   margin-bottom: 0.5rem;
 }
 
@@ -79,12 +79,12 @@
   font-family: var(--font-inter) !important;
   font-weight: 500;
   font-size: 1.4rem;
-  color: #19233f;
+  color: #114137; /* verde profundo */
   margin-bottom: 1rem;
 }
 
 .description {
-  color: #222222;
+  color: #1f6f5b; /* verde intermedio */
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 2rem;
@@ -115,23 +115,23 @@
 }
 
 .btnPrimary {
-  background-color: #19233f;
+  background-color: #114137; /* verde */
   color: #ffffff;
 }
 
 .btnPrimary:hover {
-  background-color: #0d172b;
+  background-color: #0c3028; /* verde más oscuro */
 }
 
 .btnSecondary {
   background-color: transparent;
-  border: 1px solid #19233f;
-  color: #19233f;
+  border: 1px solid #c5a572; /* dorado */
+  color: #c5a572;
 }
 
 .btnSecondary:hover {
-  background-color: #19233f;
-  color: #fff;
+  background-color: #c5a572; /* dorado */
+  color: #114137; /* verde */
 }
 
 @media (min-width: 1025px) {

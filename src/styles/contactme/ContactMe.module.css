@@ -1,11 +1,13 @@
 .contactSection {
   position: relative;
   padding: 4rem 1.5rem;
-  background-color: #114137; /* fondo verde */
+  background-color: #114137; /* verde profundo */
   color: #c7ae7d; /* dorado claro */
   text-align: center;
+  overflow: hidden;
 }
 
+/* Ornamento superior */
 .contactSection::before {
   content: "";
   position: absolute;
@@ -13,18 +15,21 @@
   left: 0;
   width: 100%;
   height: 60px;
-  background-color: #c7ae7d; /* dorado claro */
-  clip-path: polygon(0 0%, 65% 101%, 100% 0%);
+  background-color: #c7ae7d;
+  clip-path: polygon(0 0%, 65% 100%, 100% 0%);
   z-index: 0;
   pointer-events: none;
 }
 
-/* BADGE */
+/* ===========================
+   BADGE
+=========================== */
 .badgeWrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 2;
 }
 
 .badge {
@@ -36,28 +41,29 @@
   background: linear-gradient(
     135deg,
     #8d6b24 0%,
-    #b89b63 35%,
-    #c7ae7d 60%,
+    #b89b63 25%,
+    #b89b63 50%,
+    #c7ae7d 75%,
     #8d6b24 100%
   );
 
+  color: #000;
   border-radius: 9999px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   font-family: var(--font-raleway);
   font-weight: 700;
-  margin: 0 auto 1rem;
-  margin-top: 0.5rem;
 }
 
-/* TITLES */
+/* ===========================
+   TITULOS
+=========================== */
 .heading {
   font-size: 2.5rem;
   font-family: var(--font-raleway);
+  font-weight: 700;
   color: #c7ae7d;
   margin-bottom: 0.5rem;
-  text-align: center;
-  font-weight: 700;
 }
 
 .subHeading {
@@ -66,10 +72,11 @@
   font-weight: 400;
   color: #e5d8b8;
   margin-bottom: 2.5rem;
-  text-align: center;
 }
 
-/* CONTACT WRAPPER */
+/* ===========================
+   WRAPPER
+=========================== */
 .contactWrapper {
   display: flex;
   gap: 3rem;
@@ -80,20 +87,20 @@
   text-align: left;
 }
 
-/* CARD */
+/* ===========================
+   CARD
+=========================== */
 .card {
-  background-color: #c7ae7d;
+  background-color: #c7ae7d; /* dorado claro */
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
   padding: 2rem;
-  color: #114137;
+  color: #114137; /* verde profundo */
   flex: 1;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   min-width: 320px;
   font-family: var(--font-inter);
-  font-weight: 400;
 }
 
 .cardTitle {
@@ -113,7 +120,9 @@
   text-underline-offset: 6px;
 }
 
-/* CONTACT INFO */
+/* ===========================
+   INFO
+=========================== */
 .contactInfo {
   color: #114137;
   font-size: 1rem;
@@ -130,17 +139,17 @@
   margin-top: 0.8rem;
   margin-bottom: 0.2rem;
   display: flex;
-  align-items: center;
   gap: 0.4rem;
   font-family: var(--font-raleway);
 }
 
-/* FORM */
+/* ===========================
+   FORM
+=========================== */
 .contactForm {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 100%;
   flex-grow: 1;
   padding: 1.5rem;
 }
@@ -153,7 +162,6 @@
   background-color: rgba(0, 0, 0, 0.05);
   font-size: 1rem;
   font-family: var(--font-inter);
-  font-weight: 400;
 }
 
 .inputField:focus,
@@ -168,7 +176,9 @@
   resize: vertical;
 }
 
-/* BUTTON */
+/* ===========================
+   BUTTON
+=========================== */
 .submitButton {
   background: linear-gradient(135deg, #8d6b24, #c7ae7d);
   font-size: 1.1rem;
@@ -178,15 +188,18 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
   margin-top: auto;
+  color: #000;
 }
 
 .submitButton:hover {
   background: linear-gradient(135deg, #b89b63, #e5d8b8);
 }
 
-/* SOCIAL CARD */
+/* ===========================
+   SOCIAL CARD
+=========================== */
 .socialCardWrapper {
   display: flex;
   justify-content: center;
@@ -194,64 +207,65 @@
 }
 
 .socialCard {
-  background-color: #c7ae7d;
+  background-color: #ffffff; /* blanca */
   color: #114137;
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
   max-width: 480px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
   font-family: var(--font-inter);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.22);
 }
 
 .socialCard p {
   margin-bottom: 1.5rem;
+  color: #114137;
 }
 
-/* SOCIAL BUTTONS */
+/* ===========================
+   SOCIAL BUTTONS
+=========================== */
 .socialButtons {
   display: flex;
   justify-content: center;
-  align-items: stretch;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
 .socialButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 0.75rem 1.25rem;
   border-radius: 8px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
   font-family: var(--font-raleway);
   font-weight: 700;
-
-  background: linear-gradient(135deg, #8d6b24, #c7ae7d);
-  border: 1px solid transparent;
+  color: #fff;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-.socialButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
 
 .socialButton svg {
   margin-right: 0.5rem;
 }
 
+.socialButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Instagram */
 .instagramButton {
-  background: linear-gradient(45deg, #b89b63, #c7ae7d);
-  border: none;
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
 }
 
+/* Facebook */
 .facebookButton {
-  background: linear-gradient(45deg, #8d6b24, #b89b63);
-  border: none;
+  background: #1877f2;
 }
 
-/* RESPONSIVE */
+/* ===========================
+   RESPONSIVE
+=========================== */
 @media (max-width: 768px) {
   .contactWrapper {
     flex-direction: column;
@@ -260,8 +274,8 @@
   }
 
   .card {
-    padding: 1.5rem;
     min-width: 100%;
+    padding: 1.5rem;
   }
 
   .contactInfo p {
@@ -277,7 +291,9 @@
   }
 }
 
-/* SPINNER */
+/* ===========================
+   SPINNER
+=========================== */
 .spinner {
   border: 3px solid rgba(255, 255, 255, 0.3);
   border-top: 3px solid #8d6b24;
@@ -290,10 +306,7 @@
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }

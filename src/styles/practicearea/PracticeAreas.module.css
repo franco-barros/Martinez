@@ -2,8 +2,8 @@
   position: relative;
   overflow: hidden;
 
-  /* 🎨 Nueva paleta unificada */
-  --pa-bg: #114137; /* fondo verde oscuro */
+  /* 🎨 Paleta unificada */
+  --pa-bg: #114137; /* verde profundo */
   --pa-text: #000; /* texto negro */
   --pa-gold-1: #8d6b24; /* dorado fuerte */
   --pa-gold-2: #b89b63; /* dorado medio */
@@ -17,6 +17,7 @@
   color: var(--pa-text);
 }
 
+/* --- Ornamentación superior --- */
 .practiceAreasSection::before {
   content: "";
   position: absolute;
@@ -28,9 +29,9 @@
   clip-path: polygon(0 0%, 35% 100%, 100% 0%);
   z-index: 1;
   pointer-events: none;
-  transform: translateZ(0);
 }
 
+/* --- Ornamentación inferior --- */
 .practiceAreasSection::after {
   content: "";
   position: absolute;
@@ -42,7 +43,6 @@
   clip-path: polygon(0 100%, 35% 0%, 100% 100%);
   z-index: 1;
   pointer-events: none;
-  transform: translateZ(0);
 }
 
 /* --- Cabecera --- */
@@ -87,7 +87,7 @@
   font-size: 1rem;
 }
 
-/* --- Tarjetas --- */
+/* --- Grid Desktop --- */
 .gridDesktop {
   display: none;
   gap: 1.5rem;
@@ -101,6 +101,7 @@
   }
 }
 
+/* --- Slider Mobile --- */
 .sliderMobile {
   display: flex;
   gap: 1rem;
@@ -112,6 +113,7 @@
   }
 }
 
+/* --- Tarjeta principal --- */
 .areaCard {
   background: var(--pa-gold-3);
   border-radius: 14px;
@@ -126,7 +128,7 @@
 
 .areaCard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
 }
 
 /* --- Icono superior --- */
@@ -144,7 +146,7 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
 }
 
-/* --- Título --- */
+/* --- Título de la tarjeta --- */
 .areaCard h4 {
   color: var(--pa-gold-1);
   font-weight: 700;
@@ -153,7 +155,7 @@
   text-align: center;
 }
 
-/* --- Lista de ítems --- */
+/* --- Lista --- */
 .itemList {
   list-style: none;
   margin: 0;
@@ -167,7 +169,7 @@
   margin-bottom: 0.55rem;
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #114137; /* buen contraste */
+  color: #114137; /* contraste ideal */
 }
 
 /* Check */
@@ -185,7 +187,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
 }
 
-/* Responsivo */
+/* --- Responsivo --- */
 @media (max-width: 768px) {
   .practiceAreasSection::before {
     height: 40px;

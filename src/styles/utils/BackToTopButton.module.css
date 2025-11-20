@@ -2,12 +2,15 @@
   position: fixed;
   bottom: 0.55rem;
   left: 0.55rem;
-  background: linear-gradient(135deg, #e50914 0%, #b3000d 50%, #99000b 100%);
+
+  /* 🌟 Gradiente verde → dorado */
+  background: linear-gradient(135deg, #0e3b30 0%, #346f5f 40%, #c7ae7d 100%);
+
   color: #ffffff;
   padding: 0.75rem;
   border: none;
   border-radius: 50%;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
   z-index: 10000;
   display: flex;
   align-items: center;
@@ -19,7 +22,8 @@
 }
 
 .backToTopButton:hover {
-  background: linear-gradient(135deg, #b3000d 0%, #e50914 50%, #cc000f 100%);
+  /* Hover invertido: dorado → verde */
+  background: linear-gradient(135deg, #c7ae7d 0%, #b79862 40%, #0e3b30 100%);
   transform: scale(1.1);
 }
 

@@ -13,6 +13,7 @@ const Navbar: React.FC = () => {
     () => [
       { id: "hero", label: "Inicio" },
       { id: "aboutus", label: "Sobre mí" },
+      { id: "section-practiceareas", label: "Servicios" },
       { id: "contact", label: "Contacto" },
     ],
     []
@@ -69,7 +70,7 @@ const Navbar: React.FC = () => {
         >
           <span className={styles.brandPrimary}>Paula</span>{" "}
           <span className={styles.brandSecondary}>Martínez</span>
-          <span className={styles.brandSubtitle}>Contadora Pública</span>
+          <span className={styles.brandSubtitle}>Asesoramiento contable</span>
         </button>
 
         <div className={styles.links}>

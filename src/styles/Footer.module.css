@@ -1,6 +1,6 @@
 .footer {
-  background-color: var(--pa-bg, #ffffff);
-  color: var(--text-dark, #111111);
+  background-color: #ffffff; /* fondo blanco OK */
+  color: #111111; /* texto base */
   padding: 2rem 1.5rem;
   font-family: var(
     --font-inter,
@@ -32,15 +32,15 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--primary-red, #b81c1c);
+  color: #8d6b24; /* dorado oscuro */
   font-family: var(--font-raleway);
 }
 
 .subtitle {
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--text-dark, #111111);
-  border-bottom: 1px solid rgba(184, 28, 28, 0.15);
+  color: #114137; /* verde */
+  border-bottom: 1px solid rgba(17, 65, 55, 0.25); /* verde transparente */
   padding-bottom: 0.2rem;
   margin-bottom: 0.5rem;
   font-family: var(--font-raleway);
@@ -49,7 +49,7 @@
 .description {
   font-size: 0.9rem;
   line-height: 1.4;
-  color: var(--text-dark, #111111);
+  color: #111111;
   font-family: var(--font-inter);
 }
 
@@ -72,7 +72,7 @@
   padding: 0;
   margin: 0;
   font: inherit;
-  color: var(--primary-red, #b81c1c);
+  color: #114137; /* verde */
   cursor: pointer;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -80,7 +80,7 @@
 
 .list li a:hover,
 .linkButton:hover {
-  color: var(--pa-accent-2, #e50914);
+  color: #8d6b24; /* dorado oscuro al hover */
   text-decoration: underline;
 }
 
@@ -89,13 +89,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid rgba(184, 28, 28, 0.15);
+  border-top: 1px solid rgba(17, 65, 55, 0.25); /* verde suave */
   padding-top: 1rem;
 }
 
 .copy {
   font-size: 0.8rem;
-  color: var(--text-dark, #111111);
+  color: #114137; /* verde suave */
   text-align: center;
   width: 100%;
   font-family: var(--font-inter);

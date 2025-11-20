@@ -1,8 +1,9 @@
 .navbar {
-  --primary: #e50914;
+  --primary: #c7ae7d; /* Dorado */
+  --accent: #0e3b30; /* Verde profundo */
   --text: #ffffff;
-  --background: rgba(0, 0, 0, 0.85);
-  --border: rgba(255, 255, 255, 0.1);
+  --background: rgba(14, 59, 48, 0.85); /* Verde + blur */
+  --border: rgba(199, 174, 125, 0.25); /* Dorado translúcido */
 
   position: fixed;
   top: 0;
@@ -20,7 +21,7 @@
 
 .scrolled {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
-  border-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(199, 174, 125, 0.15); /* dorado más suave */
 }
 
 .container {
@@ -43,6 +44,7 @@
   padding: 0;
 }
 
+/* Marca principal en dorado */
 .brandPrimary {
   color: var(--primary);
   font-size: 1.4rem;
@@ -50,15 +52,17 @@
   letter-spacing: 0.5px;
 }
 
+/* Marca secundaria en blanco */
 .brandSecondary {
   color: var(--text);
   font-size: 1.4rem;
   font-weight: 700;
 }
 
+/* Subtítulo en dorado suave */
 .brandSubtitle {
   font-size: 0.9rem;
-  color: #bbbbbb;
+  color: #e8dcc0;
   font-weight: 400;
   margin-top: 2px;
 }
@@ -80,6 +84,7 @@
   position: relative;
 }
 
+/* Hover: dorado + levanta */
 .navLink:hover {
   color: var(--primary);
   transform: translateY(-1px);
@@ -89,6 +94,7 @@
   font-weight: 600;
 }
 
+/* Subrayado dorado */
 .activeLink::after {
   content: "";
   position: absolute;
@@ -110,6 +116,7 @@
   transition: color 0.2s ease;
 }
 
+/* Hover dorado */
 .menuButton:hover {
   color: var(--primary);
 }
