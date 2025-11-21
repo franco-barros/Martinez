@@ -5,15 +5,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* <-- centra vertical */
+  justify-content: center;
   padding: 2rem 1.5rem;
   background-color: #ffffff;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5;
-  color: #114137; /* verde profundo */
+  color: #114137;
   overflow: hidden;
 }
+
+/* Carousel */
 .hero .carousel {
   position: absolute;
   top: 0;
@@ -43,6 +45,7 @@
   border-radius: 0;
 }
 
+/* Overlay */
 .hero .overlay {
   position: absolute;
   top: 0;
@@ -53,43 +56,49 @@
   z-index: 1;
 }
 
+/* Content box */
 .content {
   text-align: center;
   background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.08); /* borde suave */
+  border: 1px solid rgba(0, 0, 0, 0.08);
   padding: 2rem 1.5rem;
   border-radius: 14px;
   max-width: 640px;
   margin: 2rem 0;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* sombra suave */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   z-index: 2;
   font-weight: 400;
 }
 
+/* Title — Jolly Headline */
 .title {
-  font-family: var(--font-raleway) !important;
+  font-family: var(--font-rethink-sans) !important;
   font-weight: 800;
   font-size: 2.6rem;
   line-height: 1.2;
-  color: #c5a572; /* dorado */
+  color: #c5a572;
   margin-bottom: 0.5rem;
 }
 
+/* Subtitle — Rethink Sans */
 .subtitle {
-  font-family: var(--font-inter) !important;
-  font-weight: 500;
+  font-family: var(--font-rethink-sans) !important;
+  font-weight: 600;
   font-size: 1.4rem;
-  color: #114137; /* verde profundo */
+  color: #114137;
   margin-bottom: 1rem;
 }
 
+/* Description — Rethink Sans */
 .description {
-  color: #1f6f5b; /* verde intermedio */
+  font-family: var(--font-rethink-sans);
+  color: #1f6f5b;
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 2rem;
 }
 
+/* Buttons container */
 .buttons {
   display: flex;
   justify-content: center;
@@ -97,10 +106,11 @@
   flex-wrap: wrap;
 }
 
+/* Button base — Rethink Sans */
 .btn {
   display: inline-block;
   padding: 0.8rem 1.8rem;
-  font-family: var(--font-inter) !important;
+  font-family: var(--font-rethink-sans) !important;
   font-weight: 600;
   font-size: 1rem;
   border-radius: 8px;
@@ -114,26 +124,29 @@
   transform: scale(0.98);
 }
 
+/* Primary button */
 .btnPrimary {
-  background-color: #114137; /* verde */
+  background-color: #114137;
   color: #ffffff;
 }
 
 .btnPrimary:hover {
-  background-color: #0c3028; /* verde más oscuro */
+  background-color: #0c3028;
 }
 
+/* Secondary button */
 .btnSecondary {
   background-color: transparent;
-  border: 1px solid #c5a572; /* dorado */
+  border: 1px solid #c5a572;
   color: #c5a572;
 }
 
 .btnSecondary:hover {
-  background-color: #c5a572; /* dorado */
-  color: #114137; /* verde */
+  background-color: #c5a572;
+  color: #114137;
 }
 
+/* Desktop adjustments */
 @media (min-width: 1025px) {
   .content {
     max-width: 540px;
@@ -149,6 +162,7 @@
   }
 }
 
+/* Tablet */
 @media (max-width: 1024px) {
   .title {
     font-size: 2.2rem;
@@ -159,50 +173,13 @@
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .hero {
     height: auto;
     min-height: 80vh;
     padding: 1.5rem 1rem;
-    justify-content: center; /* mantiene centrado */
-    text-align: center;
-  }
-
-  .content {
-    max-width: 95%;
-    padding: 1.5rem;
-  }
-
-  .title {
-    font-size: 1.9rem;
-  }
-
-  .subtitle {
-    font-size: 1.2rem;
-  }
-
-  .description {
-    font-size: 0.95rem;
-  }
-
-  .buttons {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-
-  .btn {
-    width: 100%;
-    max-width: 320px;
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    height: auto;
-    min-height: 80vh;
-    padding: 1.5rem 1rem;
-    justify-content: center; /* mantiene centrado */
+    justify-content: center;
     text-align: center;
   }
 

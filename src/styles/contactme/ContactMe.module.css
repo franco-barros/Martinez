@@ -1,13 +1,12 @@
 .contactSection {
   position: relative;
   padding: 4rem 1.5rem;
-  background-color: #114137; /* verde profundo */
-  color: #c7ae7d; /* dorado claro */
+  background-color: #114137;
+  color: #c7ae7d;
   text-align: center;
   overflow: hidden;
 }
 
-/* Ornamento superior */
 .contactSection::before {
   content: "";
   position: absolute;
@@ -21,9 +20,7 @@
   pointer-events: none;
 }
 
-/* ===========================
-   BADGE
-=========================== */
+/* BADGE */
 .badgeWrapper {
   display: flex;
   justify-content: center;
@@ -51,16 +48,14 @@
   border-radius: 9999px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  font-family: var(--font-raleway);
+  font-family: var(--font-rethink-sans);
   font-weight: 700;
 }
 
-/* ===========================
-   TITULOS
-=========================== */
+/* TITULOS */
 .heading {
   font-size: 2.5rem;
-  font-family: var(--font-raleway);
+  font-family: var(--font-rethink-sans);
   font-weight: 700;
   color: #c7ae7d;
   margin-bottom: 0.5rem;
@@ -68,15 +63,13 @@
 
 .subHeading {
   font-size: 1.1rem;
-  font-family: var(--font-inter);
+  font-family: var(--font-rethink-sans);
   font-weight: 400;
   color: #e5d8b8;
   margin-bottom: 2.5rem;
 }
 
-/* ===========================
-   WRAPPER
-=========================== */
+/* WRAPPER */
 .contactWrapper {
   display: flex;
   gap: 3rem;
@@ -87,25 +80,23 @@
   text-align: left;
 }
 
-/* ===========================
-   CARD
-=========================== */
+/* CARD */
 .card {
-  background-color: #c7ae7d; /* dorado claro */
+  background-color: #c7ae7d;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
   padding: 2rem;
-  color: #114137; /* verde profundo */
+  color: #114137;
   flex: 1;
   display: flex;
   flex-direction: column;
   min-width: 320px;
-  font-family: var(--font-inter);
+  font-family: var(--font-rethink-sans);
 }
 
 .cardTitle {
   font-size: 1.5rem;
-  font-family: var(--font-raleway);
+  font-family: var(--font-rethink-sans);
   font-weight: 700;
   color: #8d6b24;
   margin-bottom: 1.5rem;
@@ -120,9 +111,7 @@
   text-underline-offset: 6px;
 }
 
-/* ===========================
-   INFO
-=========================== */
+/* INFO */
 .contactInfo {
   color: #114137;
   font-size: 1rem;
@@ -130,7 +119,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  font-family: var(--font-inter);
+  font-family: var(--font-rethink-sans);
 }
 
 .infoTitle {
@@ -140,12 +129,10 @@
   margin-bottom: 0.2rem;
   display: flex;
   gap: 0.4rem;
-  font-family: var(--font-raleway);
+  font-family: var(--font-rethink-sans);
 }
 
-/* ===========================
-   FORM
-=========================== */
+/* FORM */
 .contactForm {
   display: flex;
   flex-direction: column;
@@ -161,7 +148,7 @@
   border: 1px solid #8d6b24;
   background-color: rgba(0, 0, 0, 0.05);
   font-size: 1rem;
-  font-family: var(--font-inter);
+  font-family: var(--font-rethink-sans);
 }
 
 .inputField:focus,
@@ -176,13 +163,11 @@
   resize: vertical;
 }
 
-/* ===========================
-   BUTTON
-=========================== */
+/* BUTTON */
 .submitButton {
   background: linear-gradient(135deg, #8d6b24, #c7ae7d);
   font-size: 1.1rem;
-  font-family: var(--font-raleway);
+  font-family: var(--font-rethink-sans);
   font-weight: 600;
   padding: 0.9rem;
   border: none;
@@ -197,9 +182,7 @@
   background: linear-gradient(135deg, #b89b63, #e5d8b8);
 }
 
-/* ===========================
-   SOCIAL CARD
-=========================== */
+/* SOCIAL CARD */
 .socialCardWrapper {
   display: flex;
   justify-content: center;
@@ -207,13 +190,13 @@
 }
 
 .socialCard {
-  background-color: #ffffff; /* blanca */
+  background-color: #ffffff;
   color: #114137;
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
   max-width: 480px;
-  font-family: var(--font-inter);
+  font-family: var(--font-rethink-sans);
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.22);
 }
 
@@ -222,9 +205,7 @@
   color: #114137;
 }
 
-/* ===========================
-   SOCIAL BUTTONS
-=========================== */
+/* SOCIAL BUTTONS */
 .socialButtons {
   display: flex;
   justify-content: center;
@@ -238,7 +219,7 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-  font-family: var(--font-raleway);
+  font-family: var(--font-rethink-sans);
   font-weight: 700;
   color: #fff;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
@@ -263,9 +244,7 @@
   background: #1877f2;
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .contactWrapper {
     flex-direction: column;
@@ -291,9 +270,7 @@
   }
 }
 
-/* ===========================
-   SPINNER
-=========================== */
+/* SPINNER */
 .spinner {
   border: 3px solid rgba(255, 255, 255, 0.3);
   border-top: 3px solid #8d6b24;

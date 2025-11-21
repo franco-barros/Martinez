@@ -2,18 +2,18 @@ import "../styles/globals.css";
 import { ReactNode } from "react";
 import { Footer } from "../components/footer";
 import { ClientNavbarWrapper } from "../components/clientnavbarwrapper";
-import { Raleway, Inter } from "next/font/google";
+import { Rethink_Sans, Jolly_Lodger } from "next/font/google";
 
-const raleway = Raleway({
+const rethinkSans = Rethink_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-raleway",
+  weight: ["400", "500", "600", "700", "800"], // ← Corregido
+  variable: "--font-rethink-sans",
 });
 
-const inter = Inter({
+const jolly = Jolly_Lodger({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-inter",
+  weight: ["400"],
+  variable: "--font-jolly",
 });
 
 export const metadata = {
@@ -25,7 +25,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="es" className={`${raleway.variable} ${inter.variable}`}>
+    <html lang="es" className={`${rethinkSans.variable} ${jolly.variable}`}>
       <body>
         <ClientNavbarWrapper>{children}</ClientNavbarWrapper>
         <Footer />

@@ -3,11 +3,11 @@
   overflow: hidden;
 
   /* 🎨 Paleta unificada */
-  --pa-bg: #114137; /* verde profundo */
-  --pa-text: #000; /* texto negro */
-  --pa-gold-1: #8d6b24; /* dorado fuerte */
-  --pa-gold-2: #b89b63; /* dorado medio */
-  --pa-gold-3: #c7ae7d; /* dorado claro */
+  --pa-bg: #114137;
+  --pa-text: #000;
+  --pa-gold-1: #8d6b24;
+  --pa-gold-2: #b89b63;
+  --pa-gold-3: #c7ae7d;
   --pa-soft: rgba(255, 255, 255, 0.1);
   --pa-soft-border: rgba(255, 255, 255, 0.18);
   --pa-card-shadow: rgba(0, 0, 0, 0.18);
@@ -15,6 +15,9 @@
   padding: 2rem 1rem;
   background-color: var(--pa-bg);
   color: var(--pa-text);
+
+  /* 🔥 Fuente correcta */
+  font-family: var(--font-rethink-sans);
 }
 
 /* --- Ornamentación superior --- */
@@ -72,12 +75,14 @@
   border-radius: 9999px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  font-family: var(--font-raleway);
+
+  /* 🔥 Fuente correcta */
+  font-family: var(--font-rethink-sans);
   font-weight: 700;
+
   margin: 0 auto 1rem;
 }
 
-/* --- Descripción --- */
 .description {
   text-align: center;
   max-width: 720px;
@@ -85,6 +90,9 @@
   color: var(--pa-gold-3);
   line-height: 1.6;
   font-size: 1rem;
+
+  /* 🔥 Fuente correcta */
+  font-family: var(--font-rethink-sans);
 }
 
 /* --- Grid Desktop --- */
@@ -113,7 +121,7 @@
   }
 }
 
-/* --- Tarjeta principal --- */
+/* --- Tarjeta --- */
 .areaCard {
   background: var(--pa-gold-3);
   border-radius: 14px;
@@ -124,6 +132,9 @@
   position: relative;
   z-index: 2;
   text-align: left;
+
+  /* 🔥 Fuente correcta */
+  font-family: var(--font-rethink-sans);
 }
 
 .areaCard:hover {
@@ -131,7 +142,7 @@
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
 }
 
-/* --- Icono superior --- */
+/* --- Icono --- */
 .iconWrapper {
   display: flex;
   align-items: center;
@@ -146,13 +157,16 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
 }
 
-/* --- Título de la tarjeta --- */
+/* --- Title inside card --- */
 .areaCard h4 {
   color: var(--pa-gold-1);
   font-weight: 700;
   margin-bottom: 0.8rem;
   font-size: 1.15rem;
   text-align: center;
+
+  /* 🔥 Fuente correcta */
+  font-family: var(--font-rethink-sans);
 }
 
 /* --- Lista --- */
@@ -169,7 +183,10 @@
   margin-bottom: 0.55rem;
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #114137; /* contraste ideal */
+  color: #114137;
+
+  /* 🔥 Fuente correcta */
+  font-family: var(--font-rethink-sans);
 }
 
 /* Check */
@@ -187,7 +204,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
 }
 
-/* --- Responsivo --- */
+/* --- Mobile --- */
 @media (max-width: 768px) {
   .practiceAreasSection::before {
     height: 40px;

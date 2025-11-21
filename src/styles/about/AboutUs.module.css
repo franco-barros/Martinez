@@ -10,7 +10,7 @@
   background-color: var(--dark-bg);
   width: 100vw;
   margin: 0;
-  font-family: var(--font-inter);
+  font-family: var(--font-rethink-sans);
   color: var(--text-dark);
   overflow: hidden;
 }
@@ -26,16 +26,9 @@
   width: 100%;
   height: 60px;
 
-  /* Dorado elegante con iluminación */
   background: linear-gradient(225deg, #bfa776 0%, #c7ae7d 60%, #b89b63 100%);
-
-  /* Corte estilizado */
   clip-path: polygon(0 100%, 45% 0%, 100% 100%);
-
-  /* Profundidad premium */
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.25));
-
-  /* filo suave */
   border-top: 1px solid rgba(0, 0, 0, 0.15);
 
   z-index: 1;
@@ -53,15 +46,9 @@
   width: 100%;
   height: 60px;
 
-  /* Dorado elegante con iluminación */
   background: linear-gradient(135deg, #b89b63 0%, #c7ae7d 40%, #bfa776 100%);
-
-  /* Corte premium simétrico */
   clip-path: polygon(0 0, 55% 100%, 100% 0);
-
-  /* profundidad */
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.25));
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
   z-index: 1;
@@ -97,7 +84,7 @@
   border-radius: 9999px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  font-family: var(--font-raleway);
+  font-family: var(--font-rethink-sans);
   font-weight: 700;
 
   margin: 0 auto 1rem;
@@ -148,6 +135,7 @@
 .textWrapper h2,
 .textWrapper h3 {
   color: #114137;
+  font-family: var(--font-rethink-sans);
 }
 
 .textWrapper {
@@ -171,6 +159,7 @@
   text-decoration: none;
   transition: color 0.2s ease;
   color: #114137;
+  font-family: var(--font-rethink-sans);
 }
 
 .socialLinks a:hover {
