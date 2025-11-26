@@ -1,9 +1,10 @@
+/* NAVBAR BASE */
 .navbar {
-  --primary: #c7ae7d; /* Dorado */
-  --accent: #0e3b30; /* Verde profundo */
+  --primary: #0e3b30; /* verde profundo */
+  --accent: #c7ae7d; /* dorado */
   --text: #ffffff;
-  --background: rgba(14, 59, 48, 0.85); /* Verde + blur */
-  --border: rgba(199, 174, 125, 0.25); /* Dorado translúcido */
+  --background: rgba(199, 174, 125, 0.85);
+  --border: rgba(14, 59, 48, 0.25);
 
   position: fixed;
   top: 0;
@@ -17,15 +18,15 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   border-bottom: 1px solid var(--border);
 
-  /* Tipografía base → Rethink Sans */
   font-family: var(--font-rethink-sans);
 }
 
 .scrolled {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
-  border-color: rgba(199, 174, 125, 0.15);
+  border-color: rgba(14, 59, 48, 0.15);
 }
 
+/* CONTENEDOR */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -35,6 +36,7 @@
   justify-content: space-between;
 }
 
+/* LOGO */
 .logoText {
   background: none;
   border: none;
@@ -46,54 +48,51 @@
   padding: 0;
 }
 
-/* Nombre principal — Joly Headline en Bold */
+/* Paula → blanco */
 .brandPrimary {
-  font-family: var(--font-rethink-sans) !important;
-  font-weight: 800; /* Solidez */
-  font-size: 1.6rem;
-  letter-spacing: 0.5px;
-  color: var(--primary);
-}
-
-/* Apellido / parte secundaria — Joly Headline también */
-.brandSecondary {
-  font-family: var(--font-rethink-sans) !important;
   font-weight: 800;
   font-size: 1.6rem;
-  color: var(--text);
+  letter-spacing: 0.5px;
+  color: #f1f1f1 !important;
 }
 
-/* Subtítulo → Rethink Sans */
+/* Martínez → verde profundo (restaurado) */
+.brandSecondary {
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: var(--primary) !important;
+}
+
+/* Asesoramiento contable → blanco */
 .brandSubtitle {
-  font-family: var(--font-rethink-sans) !important;
   font-size: 0.9rem;
   font-weight: 400;
-  color: #e8dcc0;
+  color: #f1f1f1 !important;
   margin-top: 2px;
 }
 
+/* LINKS ESCRITORIO */
 .links {
   display: flex;
   gap: 1.5rem;
 }
 
-/* Navegación → Rethink Sans */
+/* Inicio / Sobre mí / Preguntas → #f1f1f1 */
 .navLink {
   background: none;
   border: none;
-  font-family: var(--font-rethink-sans);
   cursor: pointer;
   padding: 0.5rem;
-  color: var(--text);
+  color: #f1f1f1 !important; /* ✔ ahora blanco */
   font-size: 0.95rem;
   font-weight: 500;
   transition: color 0.25s ease, transform 0.2s ease;
   position: relative;
 }
 
-/* Hover dorado */
+/* Hover → verde profundo (sin cambios) */
 .navLink:hover {
-  color: var(--primary);
+  color: var(--primary) !important;
   transform: translateY(-1px);
 }
 
@@ -101,7 +100,6 @@
   font-weight: 600;
 }
 
-/* Subrayado dorado */
 .activeLink::after {
   content: "";
   position: absolute;
@@ -109,25 +107,26 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--primary);
+  background-color: var(--primary); /* dorado */
   border-radius: 2px;
 }
 
+/* ÍCONO DEL MENÚ EN MÓVIL → blanco */
 .menuButton {
   display: none;
   background: none;
   border: none;
   font-size: 1.6rem;
   cursor: pointer;
-  color: var(--text);
+  color: #f1f1f1 !important; /* blanco */
   transition: color 0.2s ease;
 }
 
-/* Hover dorado */
 .menuButton:hover {
   color: var(--primary);
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .container {
     justify-content: center;

@@ -1,0 +1,110 @@
+/* ================================
+   FAQ TABS + QUESTIONS (Componente 2)
+================================ */
+
+.tabList {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Tabs */
+.tabItem {
+  background-color: transparent;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-raleway);
+  font-weight: 500;
+  font-size: 1rem;
+  color: #114137; /* ⬅ VERDE */
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.tabItem:hover {
+  color: #1a5a4c; /* ⬅ VERDE CLARO */
+}
+
+.tabItemActive {
+  color: #1a5a4c; /* ⬅ VERDE CLARO */
+  border-color: #114137; /* ⬅ VERDE */
+  font-weight: 500;
+}
+
+/* Lista de preguntas */
+.questionList {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+/* Ítems individuales */
+.questionItem {
+  background-color: #c7ae7d; /* fondo dorado */
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  border: 2px solid #114137; /* ⬅ BORDE VERDE SIEMPRE */
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #114137; /* texto verde */
+}
+
+.questionItem:hover,
+.questionItem:focus {
+  background-color: #d4b883; /* dorado más claro */
+  border-color: #114137; /* borde verde */
+}
+
+/* Texto de la pregunta */
+.questionText {
+  color: #114137; /* ⬅ VERDE */
+  font-family: var(--font-inter);
+  font-weight: 500;
+}
+
+/* Respuesta */
+.answerText {
+  color: #114137; /* ⬅ TODO VERDE */
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Icono */
+.chevron {
+  color: #114137; /* ⬅ VERDE */
+  transition: transform 0.3s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .tabList {
+    gap: 1rem;
+  }
+
+  .tabItem {
+    font-size: 0.9rem;
+  }
+
+  .questionItem {
+    font-size: 0.95rem;
+  }
+}

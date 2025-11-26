@@ -16,11 +16,10 @@
   background-color: var(--pa-bg);
   color: var(--pa-text);
 
-  /* 🔥 Fuente correcta */
   font-family: var(--font-rethink-sans);
 }
 
-/* --- Ornamentación superior --- */
+/* --- Ornamentación superior (MATCH con AboutSection) --- */
 .practiceAreasSection::before {
   content: "";
   position: absolute;
@@ -28,13 +27,13 @@
   left: 0;
   width: 100%;
   height: 55px;
-  background-color: var(--pa-gold-3);
+  background: linear-gradient(135deg, #b89b63 0%, #c7ae7d 40%, #bfa776 100%);
   clip-path: polygon(0 0%, 35% 100%, 100% 0%);
   z-index: 1;
   pointer-events: none;
 }
 
-/* --- Ornamentación inferior --- */
+/* --- Ornamentación inferior (MATCH con AboutSection) --- */
 .practiceAreasSection::after {
   content: "";
   position: absolute;
@@ -42,7 +41,7 @@
   left: 0;
   width: 100%;
   height: 55px;
-  background-color: var(--pa-gold-3);
+  background: linear-gradient(225deg, #bfa776 0%, #c7ae7d 60%, #b89b63 100%);
   clip-path: polygon(0 100%, 35% 0%, 100% 100%);
   z-index: 1;
   pointer-events: none;
@@ -76,7 +75,6 @@
   padding: 0.5rem 1rem;
   font-size: 1rem;
 
-  /* 🔥 Fuente correcta */
   font-family: var(--font-rethink-sans);
   font-weight: 700;
 
@@ -91,7 +89,6 @@
   line-height: 1.6;
   font-size: 1rem;
 
-  /* 🔥 Fuente correcta */
   font-family: var(--font-rethink-sans);
 }
 
@@ -133,7 +130,6 @@
   z-index: 2;
   text-align: left;
 
-  /* 🔥 Fuente correcta */
   font-family: var(--font-rethink-sans);
 }
 
@@ -165,7 +161,6 @@
   font-size: 1.15rem;
   text-align: center;
 
-  /* 🔥 Fuente correcta */
   font-family: var(--font-rethink-sans);
 }
 
@@ -185,7 +180,6 @@
   line-height: 1.5;
   color: #114137;
 
-  /* 🔥 Fuente correcta */
   font-family: var(--font-rethink-sans);
 }
 

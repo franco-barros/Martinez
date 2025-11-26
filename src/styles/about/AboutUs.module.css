@@ -7,7 +7,7 @@
 
   position: relative;
   padding: 5rem 1rem;
-  background-color: var(--dark-bg);
+  background-color: var(--primary-light); /* <── AHORA DORADO */
   width: 100vw;
   margin: 0;
   font-family: var(--font-rethink-sans);
@@ -15,9 +15,7 @@
   overflow: hidden;
 }
 
-/* =========================================================
-   🔽 POLÍGONO INFERIOR — Versión profesional
-   ========================================================= */
+/* POLÍGONO INFERIOR (sin cambios) */
 .aboutSection::after {
   content: "";
   position: absolute;
@@ -25,19 +23,15 @@
   left: 0;
   width: 100%;
   height: 60px;
-
   background: linear-gradient(225deg, #bfa776 0%, #c7ae7d 60%, #b89b63 100%);
   clip-path: polygon(0 100%, 45% 0%, 100% 100%);
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.25));
   border-top: 1px solid rgba(0, 0, 0, 0.15);
-
   z-index: 1;
   pointer-events: none;
 }
 
-/* =========================================================
-   🔼 POLÍGONO SUPERIOR — Versión profesional
-   ========================================================= */
+/* POLÍGONO SUPERIOR (sin cambios) */
 .aboutSection::before {
   content: "";
   position: absolute;
@@ -45,19 +39,15 @@
   left: 0;
   width: 100%;
   height: 60px;
-
   background: linear-gradient(135deg, #b89b63 0%, #c7ae7d 40%, #bfa776 100%);
   clip-path: polygon(0 0, 55% 100%, 100% 0);
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.25));
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
   z-index: 1;
   pointer-events: none;
 }
 
-/* =========================================================
-   BADGE
-   ========================================================= */
+/* BADGE — NO TOCADO */
 .badgeWrapper {
   text-align: center;
   margin-top: 0.5rem;
@@ -92,11 +82,9 @@
   position: relative;
 }
 
-/* =========================================================
-   CARD PRINCIPAL
-   ========================================================= */
+/* CARD PRINCIPAL — SOLO ESTO INVERTIDO */
 .descriptionCard {
-  background-color: #c7ae7d;
+  background-color: var(--dark-bg); /* <── AHORA VERDE PROFUNDO */
   border-radius: 16px;
   border: 1px solid rgba(25, 35, 63, 0.08);
   box-shadow: 0 8px 22px var(--card-shadow);
@@ -130,11 +118,11 @@
   padding: 2rem;
 }
 
-/* textos dentro de la tarjeta */
+/* textos dentro de la tarjeta (sin cambios) */
 .textWrapper p,
 .textWrapper h2,
 .textWrapper h3 {
-  color: #114137;
+  color: #f1f1f1; /* <── TEXTO NEGRO */
   font-family: var(--font-rethink-sans);
 }
 
@@ -142,9 +130,7 @@
   margin-bottom: 1.5rem;
 }
 
-/* =========================================================
-   LINKS SOCIALES
-   ========================================================= */
+/* LINKS SOCIALES (sin cambios) */
 .socialLinks {
   display: flex;
   gap: 1rem;
@@ -166,9 +152,7 @@
   color: #19233f;
 }
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
+/* RESPONSIVE (sin cambios) */
 @media (max-width: 768px) {
   .descriptionCard {
     flex-direction: column;

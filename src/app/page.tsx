@@ -6,6 +6,7 @@ import ContactMe from "../components/contactme";
 import WhatsAppButton from "../components/whatsappbutton";
 import BackToTheTopButton from "../components/backtotopbutton";
 import PracticeAreas from "../components/practiceareas";
+import { FAQSection } from "../components/FAQsection";
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
         <AboutUs />
 
         <PracticeAreas />
+
+        <FAQSection />
 
         <ContactMe />
 
