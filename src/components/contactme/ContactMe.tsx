@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image"; // <-- IMPORTANTE
 import styles from "../../styles/contactme/ContactMe.module.css";
 import { FadeInOnScroll } from "../shared/fadeInonscroll";
 import {
@@ -77,7 +78,7 @@ const ContactMe: React.FC = () => {
             <p>contacto@ficticio.com</p>
           </div>
 
-          {/* Tarjeta con formulario (solo maqueta) */}
+          {/* Tarjeta con formulario */}
           <form
             onSubmit={handleSubmit}
             className={`${styles.card} ${styles.contactForm}`}
@@ -122,6 +123,7 @@ const ContactMe: React.FC = () => {
           <div className={`${styles.card} ${styles.socialCard}`}>
             <h3 className={styles.cardTitle}>Seguinos en nuestras redes</h3>
             <p>Mantenete informado con nuestras novedades.</p>
+
             <div className={styles.socialButtons}>
               <a
                 href="#"
@@ -132,6 +134,7 @@ const ContactMe: React.FC = () => {
                 <FaInstagram style={{ marginRight: "0.5rem" }} />
                 Instagram
               </a>
+
               <a
                 href="#"
                 target="_blank"
@@ -141,6 +144,17 @@ const ContactMe: React.FC = () => {
                 <FaFacebook style={{ marginRight: "0.5rem" }} />
                 Facebook
               </a>
+            </div>
+
+            {/* 💠 ICONO PNG ABAJO DE LA CARD */}
+            <div className={styles.bottomImageWrapper}>
+              <Image
+                src="/icons/LogoB2.png" // <-- Cambiar por tu imagen real
+                alt="Decoración"
+                width={160}
+                height={140}
+                className={styles.bottomImage}
+              />
             </div>
           </div>
         </div>

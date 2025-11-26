@@ -1,7 +1,9 @@
-/* NAVBAR BASE */
+/* ================================
+   NAVBAR BASE
+================================ */
 .navbar {
-  --primary: #0e3b30; /* verde profundo */
-  --accent: #c7ae7d; /* dorado */
+  --primary: #0e3b30;
+  --accent: #c7ae7d;
   --text: #ffffff;
   --background: rgba(199, 174, 125, 0.85);
   --border: rgba(14, 59, 48, 0.25);
@@ -26,71 +28,39 @@
   border-color: rgba(14, 59, 48, 0.15);
 }
 
-/* CONTENEDOR */
+/* ================================
+   CONTENEDOR
+================================ */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.75rem 1rem;
+  padding: 1.25rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* LOGO */
-.logoText {
-  background: none;
-  border: none;
-  cursor: pointer;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-  padding: 0;
-}
-
-/* Paula → blanco */
-.brandPrimary {
-  font-weight: 800;
-  font-size: 1.6rem;
-  letter-spacing: 0.5px;
-  color: #f1f1f1 !important;
-}
-
-/* Martínez → verde profundo (restaurado) */
-.brandSecondary {
-  font-weight: 800;
-  font-size: 1.6rem;
-  color: var(--primary) !important;
-}
-
-/* Asesoramiento contable → blanco */
-.brandSubtitle {
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: #f1f1f1 !important;
-  margin-top: 2px;
-}
-
-/* LINKS ESCRITORIO */
+/* ================================
+   LINKS
+================================ */
 .links {
   display: flex;
   gap: 1.5rem;
+  margin-left: auto; /* Empuja los links hacia la derecha */
 }
 
-/* Inicio / Sobre mí / Preguntas → #f1f1f1 */
 .navLink {
   background: none;
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  color: #f1f1f1 !important; /* ✔ ahora blanco */
+  color: #f1f1f1 !important;
   font-size: 0.95rem;
   font-weight: 500;
   transition: color 0.25s ease, transform 0.2s ease;
   position: relative;
 }
 
-/* Hover → verde profundo (sin cambios) */
 .navLink:hover {
   color: var(--primary) !important;
   transform: translateY(-1px);
@@ -107,18 +77,20 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--primary); /* dorado */
+  background-color: var(--primary);
   border-radius: 2px;
 }
 
-/* ÍCONO DEL MENÚ EN MÓVIL → blanco */
+/* ================================
+   MENÚ MOBILE
+================================ */
 .menuButton {
   display: none;
   background: none;
   border: none;
   font-size: 1.6rem;
   cursor: pointer;
-  color: #f1f1f1 !important; /* blanco */
+  color: #f1f1f1 !important;
   transition: color 0.2s ease;
 }
 
@@ -126,11 +98,47 @@
   color: var(--primary);
 }
 
-/* RESPONSIVE */
+/* ================================
+   LOGOS FLOTANTES
+================================ */
+.floatingLeftLogo {
+  position: fixed;
+  top: 6px;
+  left: 15px;
+  z-index: 2000;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.leftIconWrapper {
+  position: relative;
+  width: 300px;
+  height: 48px;
+}
+
+.floatingCenterLogo {
+  position: fixed;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2000;
+}
+
+.centerIconWrapper {
+  position: relative;
+  width: 46px;
+  height: 46px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
 @media (max-width: 768px) {
   .container {
     justify-content: center;
     position: relative;
+    padding: 2rem 1rem;
   }
 
   .links {
@@ -143,5 +151,14 @@
     right: 1rem;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  .floatingCenterLogo {
+    display: none;
+  }
+
+  .leftIconWrapper {
+    width: 250px;
+    height: 40px;
   }
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useMemo } from "react";
+import Image from "next/image";
 import AnimatedMenuOverlay from "../animations/animatedmenuoverlay";
 import styles from "../../styles/Navbar.module.css";
 
@@ -63,53 +64,74 @@ const Navbar: React.FC = () => {
   }, [isOpen]);
 
   return (
-    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
-      <div className={styles.container}>
-        <button
-          className={styles.logoText}
-          onClick={() => scrollToSection("hero")}
-        >
-          <span className={styles.brandPrimary}>Paula</span>{" "}
-          <span className={styles.brandSecondary}>Martínez</span>
-          <span className={styles.brandSubtitle}>Asesoramiento contable</span>
-        </button>
-
-        <div className={styles.links}>
-          {navLinks.map((link) => (
-            <button
-              key={link.id}
-              className={[
-                styles.navLink,
-                activeSection === link.id ? styles.activeLink : "",
-              ].join(" ")}
-              onClick={() => scrollToSection(link.id)}
-            >
-              {link.label}
-            </button>
-          ))}
+    <>
+      {/* Logo izquierdo grande */}
+      <button
+        onClick={() => scrollToSection("hero")}
+        className={styles.floatingLeftLogo}
+      >
+        <div className={styles.leftIconWrapper}>
+          <Image
+            src="/icons/LogoC1.png"
+            alt="Logo izquierdo"
+            fill
+            style={{ objectFit: "contain" }}
+          />
         </div>
+      </button>
 
-        <button
-          className={styles.menuButton}
-          onClick={() => setIsOpen((prev) => !prev)}
-          aria-label="Abrir menú"
-        >
-          ☰
-        </button>
+      {/* Logo central solo desktop */}
+      <div className={styles.floatingCenterLogo}>
+        <div className={styles.centerIconWrapper}>
+          <Image
+            src="/icons/LogoVersionA1.png"
+            alt="Logo central"
+            fill
+            style={{ objectFit: "contain" }}
+          />
+        </div>
       </div>
 
-      {isOpen && (
-        <AnimatedMenuOverlay
-          onClose={() => setIsOpen(false)}
-          scrollToSection={scrollToSection}
-          navLinks={navLinks.map(({ id, label }) => ({
-            href: id,
-            label,
-          }))}
-          activeSection={activeSection}
-        />
-      )}
-    </nav>
+      {/* Navbar principal */}
+      <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
+        <div className={styles.container}>
+          <div className={styles.links}>
+            {navLinks.map((link) => (
+              <button
+                key={link.id}
+                className={[
+                  styles.navLink,
+                  activeSection === link.id ? styles.activeLink : "",
+                ].join(" ")}
+                onClick={() => scrollToSection(link.id)}
+              >
+                {link.label}
+              </button>
+            ))}
+          </div>
+
+          <button
+            className={styles.menuButton}
+            onClick={() => setIsOpen((prev) => !prev)}
+            aria-label="Abrir menú"
+          >
+            ☰
+          </button>
+        </div>
+
+        {isOpen && (
+          <AnimatedMenuOverlay
+            onClose={() => setIsOpen(false)}
+            scrollToSection={scrollToSection}
+            navLinks={navLinks.map(({ id, label }) => ({
+              href: id,
+              label,
+            }))}
+            activeSection={activeSection}
+          />
+        )}
+      </nav>
+    </>
   );
 };
 

@@ -5,6 +5,7 @@ import styles from "../../../styles/faqsection/FAQTabsCarousel.module.css";
 import { ChevronDown } from "lucide-react";
 import { FadeInOnScroll } from "../../shared/fadeInonscroll";
 
+// 🔥 ESTAS SON LAS PREGUNTAS CONTABLES ORIGINALES QUE YA TENÍAS 🔥
 const faqItems = [
   {
     category: "General",
@@ -12,17 +13,17 @@ const faqItems = [
       {
         question: "¿Qué servicios ofrece el estudio contable?",
         answer:
-          "Brindamos asesoría contable, impositiva, laboral, societaria y financiera para personas y empresas.",
+          "Brindamos asesoramiento integral en materia impositiva, laboral, contable y societaria.",
       },
       {
         question: "¿Cómo puedo solicitar una consulta?",
         answer:
-          "Podés contactarnos por WhatsApp, correo electrónico o completando el formulario de contacto.",
+          "Podés contactarnos por WhatsApp, correo electrónico o completando el formulario en la web.",
       },
       {
-        question: "¿Qué documentación necesito para una primera reunión?",
+        question: "¿Atienden de manera virtual?",
         answer:
-          "Depende del caso, pero generalmente DNI, constancia de AFIP, últimos pagos, facturación y documentación del negocio.",
+          "Sí, realizamos reuniones virtuales y seguimiento remoto de todos los trámites.",
       },
     ],
   },
@@ -30,119 +31,94 @@ const faqItems = [
     category: "Monotributo",
     questions: [
       {
-        question: "¿Cómo sé en qué categoría de Monotributo debo inscribirme?",
+        question: "¿Cómo me doy de alta en el Monotributo?",
         answer:
-          "Analizamos tu facturación, actividad y particularidades de tu caso para determinar la categoría correcta.",
+          "Realizamos el alta completa, asignación de categoría y configuración de facturación.",
       },
       {
-        question: "¿Qué pasa si me excedo en mi categoría?",
+        question: "¿Cada cuánto se hace la recategorización?",
         answer:
-          "Podés recategorizarte o pasar al Régimen General según corresponda. Te asesoramos en todo el proceso.",
+          "Dos veces al año: en enero y julio, según los ingresos y actividad facturada.",
       },
       {
-        question: "¿Cada cuánto se realiza la recategorización?",
+        question: "¿Qué pasa si me recategorizan de oficio?",
         answer:
-          "La recategorización obligatoria se realiza dos veces al año según lo establecido por AFIP.",
-      },
-    ],
-  },
-  {
-    category: "Impuestos",
-    questions: [
-      {
-        question: "¿Qué impuestos debo pagar como autónomo o empresa?",
-        answer:
-          "Depende del tipo de actividad. Puede incluir IVA, Ganancias, Autónomos, Ingresos Brutos, entre otros.",
-      },
-      {
-        question: "¿Qué documentación necesito para declarar Ganancias?",
-        answer:
-          "Comprobantes de ingresos, gastos, extractos bancarios, facturas y documentación patrimonial.",
-      },
-      {
-        question: "¿Qué pasa si tengo deuda con AFIP?",
-        answer:
-          "Te ayudamos a regularizar tu situación mediante planes de pago, refinanciación o asesoramiento personalizado.",
+          "Podemos revisar el caso y realizar el descargo si corresponde, para corregir la categoría.",
       },
     ],
   },
   {
-    category: "Empleados y Sueldos",
+    category: "Sociedades",
     questions: [
       {
-        question: "¿Realizan liquidación de sueldos?",
+        question: "¿Qué tipo de sociedad me conviene?",
         answer:
-          "Sí, calculamos recibos de sueldo, cargas sociales, altas/bajas y cumplimos con obligaciones laborales.",
+          "Depende del proyecto: SAS, SRL y SA son las más comunes. Analizamos tu situación y te asesoramos.",
       },
       {
-        question: "¿Qué necesito para registrar un empleado?",
+        question: "¿Ustedes realizan constitución de empresas?",
         answer:
-          "Datos del trabajador, alta temprana, categoría laboral y documentación del empleador.",
+          "Sí, gestionamos todo el proceso: estatuto, inscripción, CUIT, libros contables y alta impositiva.",
       },
       {
-        question: "¿Hacen liquidación de vacaciones o indemnizaciones?",
+        question: "¿Hacen balances y certificaciones contables?",
         answer:
-          "Sí, realizamos el cálculo completo y asesoramos al empleador en todo el proceso.",
+          "Sí, elaboramos balances anuales, informes contables y certificaciones para bancos o AFIP.",
       },
     ],
   },
 ];
 
 const FAQTabsCarousel: React.FC = () => {
-  const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
-  const [activeQuestionIndex, setActiveQuestionIndex] = useState<number | null>(
-    null
-  );
+  const [activeCategory, setActiveCategory] = useState(0);
+  const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
 
-  const toggleQuestion = (index: number) => {
-    setActiveQuestionIndex((prev) => (prev === index ? null : index));
+  const toggle = (idx: number) => {
+    setActiveQuestion((prev) => (prev === idx ? null : idx));
   };
 
   return (
     <>
+      {/* ---------- TABS ---------- */}
       <div className={styles.tabList}>
-        {faqItems.map((group, index) => (
+        {faqItems.map((item, i) => (
           <button
-            key={group.category}
+            key={item.category}
             className={`${styles.tabItem} ${
-              index === activeCategoryIndex ? styles.tabItemActive : ""
+              i === activeCategory ? styles.tabItemActive : ""
             }`}
             onClick={() => {
-              setActiveCategoryIndex(index);
-              setActiveQuestionIndex(null);
+              setActiveCategory(i);
+              setActiveQuestion(null);
             }}
           >
-            {group.category}
+            <span>{item.category}</span>
           </button>
         ))}
       </div>
 
-      <ul className={styles.questionList}>
-        {faqItems[activeCategoryIndex].questions.map((item, index) => {
-          const isActive = activeQuestionIndex === index;
+      {/* ---------- PREGUNTAS ---------- */}
+      <div className={styles.questionList}>
+        {faqItems[activeCategory].questions.map((item, index) => {
+          const open = activeQuestion === index;
 
           return (
-            <FadeInOnScroll key={item.question} delay={index * 0.1}>
+            <FadeInOnScroll key={item.question} delay={index * 0.15}>
               <button
                 className={styles.questionItem}
-                tabIndex={0}
-                onClick={() => toggleQuestion(index)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") toggleQuestion(index);
-                }}
+                onClick={() => toggle(index)}
               >
                 <div className={styles.questionHeader}>
                   <span
-                    className={
-                      isActive ? styles.answerText : styles.questionText
-                    }
+                    className={open ? styles.answerText : styles.questionText}
                   >
-                    {isActive ? item.answer : item.question}
+                    {open ? item.answer : item.question}
                   </span>
+
                   <ChevronDown
                     size={20}
                     className={`${styles.chevron} ${
-                      isActive ? styles.chevronOpen : ""
+                      open ? styles.chevronOpen : ""
                     }`}
                   />
                 </div>
@@ -150,7 +126,7 @@ const FAQTabsCarousel: React.FC = () => {
             </FadeInOnScroll>
           );
         })}
-      </ul>
+      </div>
     </>
   );
 };

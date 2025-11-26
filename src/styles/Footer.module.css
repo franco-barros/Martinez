@@ -95,6 +95,22 @@
   font-weight: 400;
 }
 
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.3rem; /* MENOS ESPACIO */
+}
+
+.icon {
+  width: 120px; /* MÁS COMPACTO PERO SIGUE SIENDO GRANDE */
+  height: auto;
+  object-fit: contain;
+}
+
+.section:first-child {
+  gap: 0.2rem; /* REDUCE EL ESPACIO ENTRE ICONO Y TEXTO */
+}
+
 @media (max-width: 768px) {
   .content {
     grid-template-columns: 1fr;

@@ -8,10 +8,6 @@
   justify-content: center;
   padding: 2rem 1.5rem;
   background-color: #ffffff;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #114137;
   overflow: hidden;
 }
 
@@ -42,7 +38,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0;
 }
 
 /* Overlay */
@@ -56,46 +51,48 @@
   z-index: 1;
 }
 
-/* Content box */
+/* Logo hero */
+.heroLogoWrapper {
+  position: relative;
+  width: 300px;
+  height: 260px;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* Frase */
+.phrase {
+  font-family: var(--font-rethink-sans);
+  color: #114137;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Content box con glassmorphism */
+/* Content box con glassmorphism — Opción 3 */
 .content {
   text-align: center;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  padding: 2rem 1.5rem;
-  border-radius: 14px;
-  max-width: 640px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  max-width: 660px;
   margin: 2rem 0;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+
+  /* Marco doble */
+  border: 2px solid #c7ae7d; /* dorado principal */
+  outline: 4px solid rgba(255, 255, 255, 0.35); /* borde extra estilo marco */
+  outline-offset: -6px;
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
   z-index: 2;
-  font-weight: 400;
+  transition: all 0.3s ease;
 }
 
-/* Title — Jolly Headline */
-.title {
-  font-family: var(--font-rethink-sans) !important;
-  font-weight: 800;
-  font-size: 2.6rem;
-  line-height: 1.2;
-  color: #c5a572;
-  margin-bottom: 0.5rem;
-}
-
-/* Subtitle — Rethink Sans */
-.subtitle {
-  font-family: var(--font-rethink-sans) !important;
-  font-weight: 600;
-  font-size: 1.4rem;
-  color: #114137;
-  margin-bottom: 1rem;
-}
-
-/* Description — Rethink Sans */
-.description {
-  font-family: var(--font-rethink-sans);
-  color: #1f6f5b;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
+.content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.3);
 }
 
 /* Buttons container */
@@ -106,17 +103,18 @@
   flex-wrap: wrap;
 }
 
-/* Button base — Rethink Sans */
+/* Button base */
 .btn {
+  border: none;
+  outline: none;
+
   display: inline-block;
   padding: 0.8rem 1.8rem;
   font-family: var(--font-rethink-sans) !important;
   font-weight: 600;
   font-size: 1rem;
   border-radius: 8px;
-  text-decoration: none;
   transition: all 0.25s ease;
-  border: none;
   cursor: pointer;
 }
 
@@ -124,7 +122,6 @@
   transform: scale(0.98);
 }
 
-/* Primary button */
 .btnPrimary {
   background-color: #114137;
   color: #ffffff;
@@ -134,42 +131,24 @@
   background-color: #0c3028;
 }
 
-/* Secondary button */
-.btnSecondary {
-  background-color: transparent;
-  border: 1px solid #c5a572;
-  color: #c5a572;
-}
-
-.btnSecondary:hover {
-  background-color: #c5a572;
-  color: #114137;
-}
-
-/* Desktop adjustments */
+/* Responsive */
+/* Desktop */
 @media (min-width: 1025px) {
   .content {
     max-width: 540px;
     padding: 2rem;
   }
-
-  .title {
-    font-size: 2.8rem;
-  }
-
-  .subtitle {
-    font-size: 1.5rem;
-  }
 }
 
 /* Tablet */
 @media (max-width: 1024px) {
-  .title {
-    font-size: 2.2rem;
+  .content {
+    max-width: 90%;
+    padding: 2rem;
   }
 
-  .subtitle {
-    font-size: 1.3rem;
+  .phrase {
+    font-size: 1.15rem;
   }
 }
 
@@ -179,8 +158,11 @@
     height: auto;
     min-height: 80vh;
     padding: 1.5rem 1rem;
-    justify-content: center;
-    text-align: center;
+  }
+
+  .heroLogoWrapper {
+    width: 220px;
+    height: 180px;
   }
 
   .content {
@@ -188,26 +170,17 @@
     padding: 1.5rem;
   }
 
-  .title {
-    font-size: 1.9rem;
-  }
-
-  .subtitle {
-    font-size: 1.2rem;
-  }
-
-  .description {
-    font-size: 0.95rem;
+  .phrase {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
   }
 
   .buttons {
     flex-direction: column;
-    gap: 0.8rem;
   }
 
   .btn {
     width: 100%;
     max-width: 320px;
-    font-size: 0.95rem;
   }
 }

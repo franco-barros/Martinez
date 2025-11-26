@@ -26,6 +26,11 @@ export default function RootLayout({
 }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="es" className={`${rethinkSans.variable} ${jolly.variable}`}>
+      <head>
+        {/* Favicon estándar */}
+        <link rel="icon" href="/icons/LogoA2.png" sizes="any" />
+      </head>
+
       <body>
         <ClientNavbarWrapper>{children}</ClientNavbarWrapper>
         <Footer />

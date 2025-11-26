@@ -17,8 +17,8 @@
   width: 100%;
   height: 100%;
 
-  /* 🌟 Gradiente verde → dorado */
-  background: linear-gradient(135deg, #0e3b30 0%, #346f5f 45%, #c7ae7d 100%);
+  /* 🌟 Gradiente dorado */
+  background: linear-gradient(135deg, #8d6b24 0%, #b89b63 45%, #c7ae7d 100%);
 
   padding: 4rem 2rem;
   box-sizing: border-box;
@@ -72,7 +72,7 @@
 
 .closeButton:hover {
   transform: scale(1.2);
-  color: #c7ae7d; /* dorado suave */
+  color: #c7ae7d; /* dorado */
 }
 
 .menuItemsContainer {
@@ -146,6 +146,7 @@
   }
 }
 
+/* Delays para animación secuencial de items */
 .menuItemsContainer .menuItem:nth-of-type(1) {
   animation-delay: 0.2s;
 }

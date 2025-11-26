@@ -5,9 +5,10 @@ import Image from "next/image";
 import styles from "../../styles/ImageCarousel.module.css";
 
 const images = [
-  "/images/paisajespsycology3.png",
-  "/images/paisajespsycology1.png",
-  "/images/paisajespsycology.png",
+  "/images/Contables.png",
+  "/images/Contables1.png",
+  "/images/Contables2.png",
+  "/images/Contables3.png",
 ];
 
 const ImageCarousel: React.FC = () => {

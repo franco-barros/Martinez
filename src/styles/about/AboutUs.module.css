@@ -1,13 +1,12 @@
 .aboutSection {
-  --primary-light: #c7ae7d; /* dorado */
-  --dark-bg: #114137; /* verde profundo */
+  --primary-light: #c7ae7d;
+  --dark-bg: #114137;
   --text-dark: #000;
-  --text-light: #c7ae7d;
   --card-shadow: rgba(0, 0, 0, 0.15);
 
   position: relative;
   padding: 5rem 1rem;
-  background-color: var(--primary-light); /* <── AHORA DORADO */
+  background-color: var(--primary-light);
   width: 100vw;
   margin: 0;
   font-family: var(--font-rethink-sans);
@@ -15,7 +14,7 @@
   overflow: hidden;
 }
 
-/* POLÍGONO INFERIOR (sin cambios) */
+/* Polígono inferior */
 .aboutSection::after {
   content: "";
   position: absolute;
@@ -28,10 +27,9 @@
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.25));
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   z-index: 1;
-  pointer-events: none;
 }
 
-/* POLÍGONO SUPERIOR (sin cambios) */
+/* Polígono superior */
 .aboutSection::before {
   content: "";
   position: absolute;
@@ -44,10 +42,9 @@
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.25));
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1;
-  pointer-events: none;
 }
 
-/* BADGE — NO TOCADO */
+/* Badge */
 .badgeWrapper {
   text-align: center;
   margin-top: 0.5rem;
@@ -59,7 +56,6 @@
 .badge {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 0.5rem;
 
   background: linear-gradient(
@@ -74,33 +70,27 @@
   border-radius: 9999px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  font-family: var(--font-rethink-sans);
   font-weight: 700;
-
-  margin: 0 auto 1rem;
-  z-index: 2;
-  position: relative;
+  font-family: var(--font-rethink-sans);
 }
 
-/* CARD PRINCIPAL — SOLO ESTO INVERTIDO */
+/* Card */
 .descriptionCard {
-  background-color: var(--dark-bg); /* <── AHORA VERDE PROFUNDO */
+  background-color: var(--dark-bg);
   border-radius: 16px;
   border: 1px solid rgba(25, 35, 63, 0.08);
   box-shadow: 0 8px 22px var(--card-shadow);
   max-width: 900px;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
   position: relative;
   z-index: 2;
 }
 
 .descriptionCard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
 }
 
 .imageWrapper {
@@ -118,41 +108,12 @@
   padding: 2rem;
 }
 
-/* textos dentro de la tarjeta (sin cambios) */
-.textWrapper p,
-.textWrapper h2,
-.textWrapper h3 {
-  color: #f1f1f1; /* <── TEXTO NEGRO */
+.textWrapper p {
+  color: #f1f1f1;
   font-family: var(--font-rethink-sans);
+  margin-bottom: 1.2rem;
 }
 
-.textWrapper {
-  margin-bottom: 1.5rem;
-}
-
-/* LINKS SOCIALES (sin cambios) */
-.socialLinks {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.socialLinks a {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.2s ease;
-  color: #114137;
-  font-family: var(--font-rethink-sans);
-}
-
-.socialLinks a:hover {
-  color: #19233f;
-}
-
-/* RESPONSIVE (sin cambios) */
 @media (max-width: 768px) {
   .descriptionCard {
     flex-direction: column;
@@ -160,24 +121,16 @@
 
   .imageWrapper {
     width: 100%;
-    max-width: 100%;
     height: 250px;
     border-radius: 16px 16px 0 0;
-    flex: none;
   }
 
   .infoWrapper {
-    width: 100%;
     padding: 1.5rem;
     text-align: center;
   }
 
-  .socialLinks {
-    justify-content: center;
-  }
-
   .aboutSection::before {
     height: 40px;
-    top: 0;
   }
 }

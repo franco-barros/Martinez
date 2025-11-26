@@ -1,12 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import styles from "../../styles/Footer.module.css";
 
 const Footer = () => {
   const pathname = usePathname();
-  const isHome = pathname === "/";
   const isAdmin = pathname.startsWith("/admin");
+  const isHome = pathname === "/";
 
   if (isAdmin) return null;
 
@@ -27,6 +28,17 @@ const Footer = () => {
     <footer id="footer" className={styles.footer}>
       <div className={styles.content}>
         <div className={styles.section}>
+          {/* ÍCONO AGREGADO AQUÍ */}
+          <div className={styles.iconWrapper}>
+            <Image
+              src="/icons/LogoC1.png"
+              alt="Icono Contabilidad"
+              width={160}
+              height={140}
+              className={styles.icon}
+            />
+          </div>
+
           <p className={styles.description}>
             Brindamos asesoramiento contable profesional para decisiones
             financieras seguras y eficientes, adaptadas a tus necesidades

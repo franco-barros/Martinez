@@ -2,15 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import styles from "../../styles/practicearea/PracticeAreas.module.css";
-import {
-  Layers,
-  Briefcase,
-  Users,
-  FileText,
-  Rocket,
-  Calculator,
-  TrendingUp,
-} from "lucide-react";
+import { Layers, Briefcase, Users, FileText, Rocket } from "lucide-react";
 import { FaCheck } from "react-icons/fa"; // ✅ Nuevo icono para los ticks
 import PracticeAreasMobile from "./practiceareasmobile";
 import { FadeInOnScroll } from "../shared/fadeInonscroll";
@@ -27,13 +19,13 @@ const practiceAreas: PracticeArea[] = [
     id: "1",
     title: "Asesoría impositiva y contable",
     items: [
-      "Alta de Monotributo, Responsable Inscripto y análisis de ventajas y desventajas.",
-      "Presentación de declaraciones juradas y recategorizaciones.",
-      "Asesoramiento y gestión impositiva integral para personas físicas y jurídicas.",
-      "Defensa ante organismos de fiscalización nacionales y provinciales.",
-      "Planificación fiscal para una gestión más ordenada y sostenible.",
-      "Control de documentación contable y cumplimiento normativo.",
-      "Análisis de informes contables y económicos.",
+      "Alta de Monotributo, Responsable Inscripto",
+      "Presentación de declaraciones juradas y recategorizaciones",
+      "Asesoramiento y gestión impositiva integral para personas físicas y jurídicas",
+      "Defensa ante organismos de fiscalización nacionales y provinciales",
+      "Planificación fiscal",
+      "Control de documentación contable y cumplimiento normativo",
+      "Análisis de informes contables y económicos",
     ],
     icon: <Briefcase size={28} />,
   },
@@ -41,51 +33,30 @@ const practiceAreas: PracticeArea[] = [
     id: "2",
     title: "Gestión Laboral",
     items: [
-      "Altas y bajas de personal, liquidación de sueldos y asesoramiento en normativa laboral.",
-      "Proceso de selección de personal, entrevistas e inducción.",
-      "Diseño de procesos administrativos, organigramas y manuales de funciones.",
-      "Optimización de la gestión interna y coordinación entre áreas.",
+      "Altas y bajas de personal, liquidación de sueldos y asesoramiento en normativa laboral",
+      "Proceso de selección de personal, entrevistas, inducción, etc.",
+      "Diseños de procesos administrativos, organigramas y manual de funciones",
     ],
     icon: <Users size={28} />,
   },
   {
     id: "3",
-    title: "Certificaciones Contables",
-    items: [
-      "Elaboración y emisión de certificaciones contables y laborales.",
-      "Informes para organismos públicos, entidades financieras o particulares.",
-    ],
-    icon: <FileText size={28} />,
-  },
-  {
-    id: "4",
     title: "Asesoría en Inicio de Negocios",
     items: [
-      "Asistencia integral para emprendedores y nuevas empresas.",
-      "Orientación en la elección de estructuras legales.",
-      "Planificación fiscal y gestión administrativa inicial.",
+      "Asistencia integral para emprendedores y nuevas empresas",
+      "Buscamos las mejores alternativas de financiamiento para tu proyecto",
+      "Orientación en la elección de estructuras legales, planificación fiscal y gestión administrativa inicial",
     ],
     icon: <Rocket size={28} />,
   },
   {
-    id: "5",
-    title: "Gestión Financiera y Presupuestaria",
+    id: "4",
+    title: "Certificaciones Contables",
     items: [
-      "Elaboración y control de presupuestos.",
-      "Análisis de flujo de caja y planificación de inversiones.",
-      "Estrategias para mejorar la rentabilidad y optimizar recursos financieros.",
+      "Elaboración y emisión de certificaciones contables y laborales",
+      "Informes para organismos públicos, entidades financieras o particulares",
     ],
-    icon: <Calculator size={28} />,
-  },
-  {
-    id: "6",
-    title: "Consultoría Estratégica Empresarial",
-    items: [
-      "Análisis integral del funcionamiento del negocio.",
-      "Detección de oportunidades de mejora y acompañamiento en decisiones clave.",
-      "Planificación estratégica para el crecimiento sostenible de la empresa.",
-    ],
-    icon: <TrendingUp size={28} />,
+    icon: <FileText size={28} />,
   },
 ];
 

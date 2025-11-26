@@ -1,39 +1,65 @@
 /* ================================
-   FAQ HEADER (Componente 1)
+   FAQ SECTION — COMPLETA
+   Polígonos conectados + estilos originales
 ================================ */
 
 .faqSection {
-  padding: 4rem 1.5rem;
-  background-color: #c7ae7d; /* ⬅ FONDO DORADO */
-  text-align: center;
   position: relative;
   overflow: hidden;
+  padding: 4rem 1.5rem;
+  padding-bottom: 6rem;
+
+  /* NUEVO — evita líneas entre secciones */
+  min-height: 650px;
+
+  background-color: #c7ae7d; /* fondo dorado */
+  text-align: center;
+  z-index: 0;
 }
 
-/* Polígonos decorativos (pueden quedar dorados o cambiarlos si querés) */
-.faqSection::before,
+/* === Polígono superior — MATCH ABOUT === */
+.faqSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 60px;
+
+  background: linear-gradient(135deg, #b89b63 0%, #c7ae7d 40%, #bfa776 100%);
+
+  clip-path: polygon(0 0, 55% 100%, 100% 0);
+
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.25));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  z-index: 1;
+}
+
+/* === Polígono inferior — MATCH PRACTICE AREAS === */
 .faqSection::after {
   content: "";
   position: absolute;
-  width: 380px;
-  height: 380px;
-  background: rgba(17, 65, 55, 0.18); /* ⬅ PASADO AL VERDE, NO DORADO */
-  clip-path: polygon(0% 0%, 100% 0%, 70% 100%);
-  z-index: 0;
-  filter: blur(4px);
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 60px;
+
+  background: linear-gradient(225deg, #bfa776 0%, #c7ae7d 60%, #b89b63 100%);
+
+  clip-path: polygon(0 100%, 35% 0%, 100% 100%);
+
+  filter: drop-shadow(0 -4px 6px rgba(0, 0, 0, 0.25));
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+
+  z-index: 1;
 }
 
-.faqSection::before {
-  top: -70px;
-  left: -40px;
-  transform: rotate(10deg);
-}
-
-.faqSection::after {
-  bottom: -80px;
-  right: -40px;
-  transform: rotate(-12deg);
-}
+/* ----------------------------------
+   ESTILOS ORIGINALES (conservados)
+----------------------------------- */
 
 /* Badge */
 .badge {
@@ -58,36 +84,49 @@
   font-weight: 700;
 
   margin: 0 auto 1rem;
-  z-index: 2;
   position: relative;
+  z-index: 2;
 }
 
 /* Título */
 .title {
   font-size: 2.5rem;
-  font-family: var(--font-raleway);
+  font-family: var(--font-rethink-sans);
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: #114137; /* ⬅ TODO EL TEXTO EN VERDE */
+  color: #fff; /* verde */
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .title span:first-child {
-  color: #114137; /* ⬅ VERDE */
+  color: #114137;
 }
 
 .title span:last-child {
-  color: #114137; /* ⬅ VERDE */
+  color: #114137;
 }
 
 /* Descripción */
 .description {
   font-size: 1.1rem;
-  font-family: var(--font-inter);
+  font-family: var(--font-rethink-sans);
   font-weight: 400;
-  color: #114137; /* ⬅ VERDE */
+  color: #f1f1f1; /* verde */
   margin-bottom: 2.5rem;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faqSection::before {
+    height: 40px;
+    clip-path: polygon(0 0, 45% 100%, 100% 0);
+  }
+
+  .faqSection::after {
+    height: 40px;
+    clip-path: polygon(0 100%, 45% 0, 100% 100%);
+  }
 }
