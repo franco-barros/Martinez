@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image"; // <-- IMPORTANTE
+import Image from "next/image";
 import styles from "../../styles/contactme/ContactMe.module.css";
 import { FadeInOnScroll } from "../shared/fadeInonscroll";
+
 import {
   FaInfoCircle,
   FaEnvelopeOpenText,
@@ -30,8 +31,8 @@ const ContactMe: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setFormData({ name: "", email: "", message: "" });
     alert("Formulario enviado (simulación)");
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
@@ -48,8 +49,8 @@ const ContactMe: React.FC = () => {
 
       <FadeInOnScroll delay={0.15}>
         <div className={styles.contactWrapper}>
-          {/* Tarjeta izquierda con info */}
-          <div className={`${styles.card} ${styles.contactInfo}`}>
+          {/* TARJETA DE INFORMACIÓN */}
+          <div className={styles.contactInfo}>
             <h3 className={styles.cardTitle}>
               <FaInfoCircle style={{ marginRight: "0.5rem" }} />
               Información de Contacto
@@ -78,11 +79,8 @@ const ContactMe: React.FC = () => {
             <p>contacto@ficticio.com</p>
           </div>
 
-          {/* Tarjeta con formulario */}
-          <form
-            onSubmit={handleSubmit}
-            className={`${styles.card} ${styles.contactForm}`}
-          >
+          {/* TARJETA DEL FORMULARIO */}
+          <form onSubmit={handleSubmit} className={styles.contactForm}>
             <h3 className={styles.cardTitle}>
               <FaEnvelopeOpenText style={{ marginRight: "0.5rem" }} />
               Envíanos un mensaje
@@ -95,7 +93,9 @@ const ContactMe: React.FC = () => {
               value={formData.name}
               onChange={handleChange}
               className={styles.inputField}
+              required
             />
+
             <input
               type="email"
               name="email"
@@ -103,14 +103,18 @@ const ContactMe: React.FC = () => {
               value={formData.email}
               onChange={handleChange}
               className={styles.inputField}
+              required
             />
+
             <textarea
               name="message"
               placeholder="Tu Mensaje"
               value={formData.message}
               onChange={handleChange}
               className={styles.textAreaField}
+              required
             />
+
             <button type="submit" className={styles.submitButton}>
               Enviar Mensaje
             </button>
@@ -120,8 +124,9 @@ const ContactMe: React.FC = () => {
 
       <FadeInOnScroll delay={0.3}>
         <div className={styles.socialCardWrapper}>
-          <div className={`${styles.card} ${styles.socialCard}`}>
+          <div className={styles.socialCard}>
             <h3 className={styles.cardTitle}>Seguinos en nuestras redes</h3>
+
             <p>Mantenete informado con nuestras novedades.</p>
 
             <div className={styles.socialButtons}>
@@ -146,13 +151,12 @@ const ContactMe: React.FC = () => {
               </a>
             </div>
 
-            {/* 💠 ICONO PNG ABAJO DE LA CARD */}
             <div className={styles.bottomImageWrapper}>
               <Image
-                src="/icons/LogoB2.png" // <-- Cambiar por tu imagen real
+                src="/icons/LogoB2.png"
                 alt="Decoración"
-                width={160}
-                height={140}
+                width={140}
+                height={120}
                 className={styles.bottomImage}
               />
             </div>

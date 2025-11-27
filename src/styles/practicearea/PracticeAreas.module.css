@@ -3,14 +3,13 @@
   overflow: hidden;
 
   /* 🎨 Paleta unificada */
-  --pa-bg: #114137;
+  --pa-bg: #315c52; /* Verde institucional */
   --pa-text: #000;
-  --pa-gold-1: #8d6b24;
-  --pa-gold-2: #b89b63;
-  --pa-gold-3: #c7ae7d;
+  --pa-gold-1: #c8ae7d; /* Dorado / beige */
+  --pa-gold-2: #c8ae7d;
+  --pa-gold-3: #c8ae7d;
   --pa-soft: rgba(255, 255, 255, 0.1);
   --pa-soft-border: rgba(255, 255, 255, 0.18);
-  --pa-card-shadow: rgba(0, 0, 0, 0.18);
 
   padding: 2rem 1rem;
   background-color: var(--pa-bg);
@@ -19,32 +18,10 @@
   font-family: var(--font-rethink-sans);
 }
 
-/* --- Ornamentación superior (MATCH con AboutSection) --- */
-.practiceAreasSection::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 55px;
-  background: linear-gradient(135deg, #b89b63 0%, #c7ae7d 40%, #bfa776 100%);
-  clip-path: polygon(0 0%, 35% 100%, 100% 0%);
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* --- Ornamentación inferior (MATCH con AboutSection) --- */
+/* --- SIN polígonos decorativos --- */
+.practiceAreasSection::before,
 .practiceAreasSection::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 55px;
-  background: linear-gradient(225deg, #bfa776 0%, #c7ae7d 60%, #b89b63 100%);
-  clip-path: polygon(0 100%, 35% 0%, 100% 100%);
-  z-index: 1;
-  pointer-events: none;
+  content: none;
 }
 
 /* --- Cabecera --- */
@@ -59,37 +36,75 @@
 .badge {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+  gap: 0.55rem;
 
   background: linear-gradient(
     135deg,
-    #8d6b24 0%,
-    #b89b63 25%,
-    #b89b63 50%,
-    #c7ae7d 75%,
-    #8d6b24 100%
+    #b79c67 0%,
+    #c0a574 20%,
+    #c8ae7d 50%,
+    #d6c39a 80%,
+    #b79c67 100%
   );
 
+  padding: 0.55rem 1.15rem;
   border-radius: 9999px;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
 
-  font-family: var(--font-rethink-sans);
+  font-size: 1.05rem;
   font-weight: 700;
 
-  margin: 0 auto 1rem;
+  /* Borde sutil + luz */
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  outline: 3px solid rgba(255, 255, 255, 0.15);
+  outline-offset: -3px;
+
+  /* Glow negro premium */
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+
+  margin-bottom: 2.2rem; /* más espacio con el título */
 }
 
 .description {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 2rem;
-  color: #f1f1f1;
-  line-height: 1.6;
-  font-size: 1rem;
+  position: relative;
 
-  font-family: var(--font-rethink-sans);
+  /* Fondo oscuro premium */
+  background: rgba(0, 0, 0, 0.32);
+
+  /* Blur elegante */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  /* Tamaño y espaciado */
+  padding: 2.2rem 1.8rem;
+  border-radius: 18px;
+  max-width: 750px;
+  margin: 0 auto 2.6rem;
+
+  /* Borde y detalles dorados */
+  border: 2px solid rgba(200, 174, 125, 0.55);
+  outline: 4px solid rgba(255, 255, 255, 0.2);
+  outline-offset: -6px;
+
+  /* Sombra estilo boutique */
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.38);
+
+  /* Texto */
+  color: #f2e8d6; /* dorado claro elegante */
+  font-size: 1.07rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* Icono decorativo superior (sutil, elegante) */
+.description::after {
+  content: "⬥"; /* rombo premium */
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.4rem;
+  color: #c8ae7d;
+  opacity: 0.9;
 }
 
 /* --- Grid Desktop --- */
@@ -101,7 +116,7 @@
 @media (min-width: 768px) {
   .gridDesktop {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Cambiado de 3 a 2 columnas */
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
 }
@@ -118,24 +133,27 @@
   }
 }
 
-/* --- Tarjeta --- */
+/* ============================================================
+     TARJETAS — fondo dorado, texto y contenido verde
+   ============================================================ */
 .areaCard {
-  background: var(--pa-gold-3);
-  border-radius: 14px;
-  border: 1px solid var(--pa-soft-border);
-  padding: 1.5rem 1.25rem;
-  box-shadow: 0 6px 18px var(--pa-card-shadow);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-  position: relative;
-  z-index: 2;
-  text-align: left;
+  background: var(--pa-gold-1); /* Fondo dorado */
+  padding: 1.8rem 1.4rem;
+  border-radius: 16px;
 
-  font-family: var(--font-rethink-sans);
+  border: 2px solid var(--pa-gold-1);
+  outline: 4px solid rgba(255, 255, 255, 0.28);
+  outline-offset: -6px;
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+
+  transition: all 0.28s ease;
 }
 
 .areaCard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
 }
 
 /* --- Icono --- */
@@ -149,19 +167,17 @@
   border-radius: 18px;
   margin: 0 auto 0.9rem;
   border: 1px solid var(--pa-soft-border);
-  color: var(--pa-gold-1);
+  color: #315c52; /* Verde institucional */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
 }
 
-/* --- Title inside card --- */
+/* --- Título --- */
 .areaCard h4 {
-  color: var(--pa-gold-1);
+  color: #315c52; /* Verde institucional */
   font-weight: 700;
-  margin-bottom: 0.8rem;
-  font-size: 1.15rem;
+  margin-bottom: 0.9rem;
+  font-size: 1.2rem;
   text-align: center;
-
-  font-family: var(--font-rethink-sans);
 }
 
 /* --- Lista --- */
@@ -177,10 +193,8 @@
   gap: 0.6rem;
   margin-bottom: 0.55rem;
   font-size: 0.95rem;
-  line-height: 1.5;
-  color: #114137;
-
-  font-family: var(--font-rethink-sans);
+  line-height: 1.55;
+  color: #315c52; /* Verde institucional */
 }
 
 /* Check */
@@ -193,24 +207,19 @@
   height: 18px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.12);
-  color: var(--pa-gold-1);
-  border: 1px solid var(--pa-soft-border);
+  color: #315c52; /* Verde */
+  border: 1px solid #315c52; /* Verde */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
 }
 
 /* --- Mobile --- */
 @media (max-width: 768px) {
-  .practiceAreasSection::before {
-    height: 40px;
-    clip-path: polygon(0 0%, 40% 100%, 100% 0%);
-  }
-
   .areaCard {
-    padding: 1.25rem;
+    padding: 1.4rem;
   }
 
   .areaCard h4 {
-    font-size: 1.05rem;
+    font-size: 1.08rem;
   }
 
   .itemList li {

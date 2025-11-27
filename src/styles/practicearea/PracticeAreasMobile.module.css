@@ -12,13 +12,15 @@
   justify-content: center;
 }
 
-/* CARD MOBILE */
+/* ============================
+     CARD MOBILE
+============================ */
 .areaCard {
   width: 90%;
   border-radius: 25px;
   padding: 1.5rem;
 
-  background: #c7ae7d; /* dorado claro */
+  background: #c8ae7d; /* dorado claro uniforme */
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
 
@@ -30,7 +32,9 @@
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
 }
 
-/* ICON WRAPPER */
+/* ============================
+     ICON WRAPPER
+============================ */
 .iconWrapper {
   width: 56px;
   height: 56px;
@@ -41,13 +45,15 @@
   align-items: center;
   justify-content: center;
 
-  background-color: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: rgba(255, 255, 255, 0.18); /* más elegante */
+  border: 1px solid rgba(255, 255, 255, 0.28); /* borde más definido */
 
   color: #8d6b24; /* dorado fuerte */
 }
 
-/* TITULO */
+/* ============================
+     TITULO
+============================ */
 .areaCard h4 {
   text-align: center;
   font-size: 1.1rem;
@@ -58,7 +64,9 @@
   margin-bottom: 0.75rem;
 }
 
-/* LISTA */
+/* ============================
+     LISTA
+============================ */
 .itemList {
   list-style: none;
   padding: 0;
@@ -75,23 +83,25 @@
   padding-left: 2rem;
 }
 
-/* CHECK CUSTOM */
+/* ============================
+     CHECK CUSTOM
+============================ */
 .itemList li::before {
   content: "✔";
   position: absolute;
   left: 0;
-  top: 0.15rem;
+  top: 0.12rem;
 
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.3rem; /* tamaño mejorado */
+  height: 1.3rem; /* tamaño mejorado */
   border-radius: 50%;
 
-  background-color: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   color: #8d6b24; /* dorado fuerte */
 
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 0.9rem; /* texto del check más visible */
 
   display: flex;
   align-items: center;

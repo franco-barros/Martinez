@@ -5,7 +5,6 @@ import styles from "../../../styles/faqsection/FAQTabsCarousel.module.css";
 import { ChevronDown } from "lucide-react";
 import { FadeInOnScroll } from "../../shared/fadeInonscroll";
 
-// 🔥 ESTAS SON LAS PREGUNTAS CONTABLES ORIGINALES QUE YA TENÍAS 🔥
 const faqItems = [
   {
     category: "General",
