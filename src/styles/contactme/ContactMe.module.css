@@ -85,11 +85,6 @@
   flex-direction: column;
 }
 
-.contactInfo:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
-}
-
 .contactInfo p {
   color: #333;
   margin-bottom: 0.35rem;
@@ -203,7 +198,7 @@
   color: #c7ae7d; /* Texto dorado */
   font-size: 1.05rem;
   max-width: 80%;
-  margin: 1.8rem auto 0;
+  margin: 1.2rem auto 2rem;
   text-align: center;
   line-height: 1.6;
 }
@@ -213,7 +208,7 @@
   font-size: 1.35rem;
   font-weight: 700;
   color: #c7ae7d; /* Título dorado */
-  margin-bottom: 1.3rem;
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -238,7 +233,7 @@
 .socialButtons {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
@@ -276,11 +271,6 @@
 .bottomImage {
   opacity: 0.9;
   transition: opacity 0.3s ease, transform 0.25s ease;
-}
-
-.bottomImage:hover {
-  opacity: 1;
-  transform: scale(1.05);
 }
 
 /* ----------------- TITULOS COMUNES ----------------- */

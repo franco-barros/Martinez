@@ -155,8 +155,8 @@ const ContactMe: React.FC = () => {
               <Image
                 src="/icons/LogoB2.png"
                 alt="Decoración"
-                width={140}
-                height={120}
+                width={120}
+                height={100}
                 className={styles.bottomImage}
               />
             </div>
