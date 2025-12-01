@@ -40,7 +40,7 @@ const ContactMe: React.FC = () => {
 
   return (
     <section id="contact" className={styles.contactSection}>
-      {/* ---------- TITULO Y BAJADA ----------- */}
+      {/* ---------- TITULO ----------- */}
       <FadeInOnScroll>
         <div className={styles.badgeWrapper}>
           <div className={styles.badge}>@ Contacto</div>
