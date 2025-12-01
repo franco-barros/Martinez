@@ -3,7 +3,10 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import styles from "../../styles/contactme/ContactMe.module.css";
+
 import { FadeInOnScroll } from "../shared/fadeInonscroll";
+import { SlideInFromLeft } from "../shared/slideInfromleft";
+import { SlideInFromRight } from "../shared/slideInfromright";
 
 import {
   FaInfoCircle,
@@ -37,6 +40,7 @@ const ContactMe: React.FC = () => {
 
   return (
     <section id="contact" className={styles.contactSection}>
+      {/* ---------- TITULO Y BAJADA ----------- */}
       <FadeInOnScroll>
         <div className={styles.badgeWrapper}>
           <div className={styles.badge}>@ Contacto</div>
@@ -47,9 +51,10 @@ const ContactMe: React.FC = () => {
         </p>
       </FadeInOnScroll>
 
-      <FadeInOnScroll delay={0.15}>
-        <div className={styles.contactWrapper}>
-          {/* TARJETA DE INFORMACIÓN */}
+      {/* ---------- CONTENIDO PRINCIPAL ----------- */}
+      <div className={styles.contactWrapper}>
+        {/* TARJETA: INFORMACIÓN */}
+        <SlideInFromLeft delay={0.1}>
           <div className={styles.contactInfo}>
             <h3 className={styles.cardTitle}>
               <FaInfoCircle style={{ marginRight: "0.5rem" }} />
@@ -78,8 +83,10 @@ const ContactMe: React.FC = () => {
             </h4>
             <p>contacto@ficticio.com</p>
           </div>
+        </SlideInFromLeft>
 
-          {/* TARJETA DEL FORMULARIO */}
+        {/* TARJETA: FORMULARIO */}
+        <SlideInFromRight delay={0.15}>
           <form onSubmit={handleSubmit} className={styles.contactForm}>
             <h3 className={styles.cardTitle}>
               <FaEnvelopeOpenText style={{ marginRight: "0.5rem" }} />
@@ -119,9 +126,10 @@ const ContactMe: React.FC = () => {
               Enviar Mensaje
             </button>
           </form>
-        </div>
-      </FadeInOnScroll>
+        </SlideInFromRight>
+      </div>
 
+      {/* ---------- CARD DE REDES ----------- */}
       <FadeInOnScroll delay={0.3}>
         <div className={styles.socialCardWrapper}>
           <div className={styles.socialCard}>
