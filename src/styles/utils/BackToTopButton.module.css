@@ -3,8 +3,8 @@
   bottom: 0.55rem;
   left: 0.55rem;
 
-  /* 🌟 Gradiente verde → dorado */
-  background: linear-gradient(135deg, #0e3b30 0%, #346f5f 40%, #c7ae7d 100%);
+  /* 🌟 Gradiente verde → dorado optimizado */
+  background: linear-gradient(135deg, #114137 0%, #2a6558 45%, #c7ae7d 100%);
 
   color: #ffffff;
   padding: 0.75rem;
@@ -22,8 +22,7 @@
 }
 
 .backToTopButton:hover {
-  /* Hover invertido: dorado → verde */
-  background: linear-gradient(135deg, #c7ae7d 0%, #b79862 40%, #0e3b30 100%);
+  background: linear-gradient(135deg, #c7ae7d 0%, #bfa478 40%, #114137 100%);
   transform: scale(1.1);
 }
 

@@ -97,12 +97,12 @@
 
 .iconWrapper {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 0.3rem; /* MENOS ESPACIO */
 }
 
 .icon {
-  width: 120px; /* MÁS COMPACTO PERO SIGUE SIENDO GRANDE */
+  width: 180px; /* MÁS COMPACTO PERO SIGUE SIENDO GRANDE */
   height: auto;
   object-fit: contain;
 }
