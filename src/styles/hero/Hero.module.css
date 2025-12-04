@@ -54,8 +54,8 @@
 /* Logo hero */
 .heroLogoWrapper {
   position: relative;
-  width: 300px;
-  height: 260px;
+  width: 260px;
+  aspect-ratio: 1 / 1; /* evita deformación */
   margin: 0 auto 1.5rem auto;
 }
 
@@ -161,10 +161,9 @@
   }
 
   .heroLogoWrapper {
-    width: 220px;
-    height: 180px;
+    width: 200px;
+    aspect-ratio: 1 / 1;
   }
-
   .content {
     max-width: 95%;
     padding: 1.5rem;
