@@ -254,17 +254,22 @@
   background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
 }
 
-.facebookButton {
-  background: #1877f2;
-}
+/* Eliminado: .facebookButton */
+
+/* -------- LOGO INFERIOR (CORREGIDO CON ASPECT RATIO) -------- */
 
 .bottomImageWrapper {
+  position: relative;
+  width: 130px;
+  aspect-ratio: 1 / 1;
   margin-top: 1.8rem;
-  display: flex;
-  justify-content: center;
 }
 
+.bottomImageWrapper img,
 .bottomImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   opacity: 0.9;
   transition: opacity 0.3s ease, transform 0.25s ease;
 }

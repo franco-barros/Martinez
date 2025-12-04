@@ -99,6 +99,17 @@
   justify-content: center;
 }
 
+/* ===== LOGO DECORATIVO CON ASPECT-RATIO ===== */
+.logoWrapper {
+  position: relative;
+  width: 60px;
+  aspect-ratio: 1 / 1;
+}
+
+.decorationIcon {
+  object-fit: contain;
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .layout {

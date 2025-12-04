@@ -60,13 +60,15 @@ const AboutUs: React.FC = () => {
                 </p>
 
                 <div className={styles.iconWrapper}>
-                  <Image
-                    src="/icons/LogoA2.png"
-                    alt="Icono decorativo"
-                    width={42}
-                    height={42}
-                    className={styles.decorationIcon}
-                  />
+                  <div className={styles.logoWrapper}>
+                    <Image
+                      src="/icons/LogoA2.png"
+                      alt="Icono decorativo"
+                      fill
+                      sizes="60px"
+                      className={styles.decorationIcon}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
