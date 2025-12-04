@@ -15,14 +15,13 @@ const faqItems = [
           "Brindamos asesoramiento integral en materia impositiva, laboral, contable y societaria.",
       },
       {
+        question: "¿Realizan alta y liquidación del servicio domestico?",
+        answer: "Si, generamos la inscripción y analizamos cada caso",
+      },
+      {
         question: "¿Cómo puedo solicitar una consulta?",
         answer:
           "Podés contactarnos por WhatsApp, correo electrónico o completando el formulario en la web.",
-      },
-      {
-        question: "¿Atienden de manera virtual?",
-        answer:
-          "Sí, realizamos reuniones virtuales y seguimiento remoto de todos los trámites.",
       },
     ],
   },
@@ -62,7 +61,7 @@ const faqItems = [
       {
         question: "¿Hacen balances y certificaciones contables?",
         answer:
-          "Sí, elaboramos balances anuales, informes contables y certificaciones para bancos o AFIP.",
+          "Sí, elaboramos balances anuales, informes contables y certificaciones para bancos o ARCA.",
       },
     ],
   },

@@ -14,7 +14,6 @@ import {
   FaPhoneAlt,
   FaWhatsapp,
   FaInstagram,
-  FaFacebook,
   FaMapMarkerAlt,
   FaEnvelope,
 } from "react-icons/fa";
@@ -65,8 +64,8 @@ const ContactMe: React.FC = () => {
               <FaMapMarkerAlt style={{ marginRight: "0.5rem" }} />
               Dirección
             </h4>
-            <p>Calle Falsa 123</p>
-            <p>Ciudad Ejemplo, País Ficticio</p>
+            <p>Rivadavia 287 (e)</p>
+            <p>Ciudad de San Juan, Argentina</p>
 
             <h4 className={styles.infoTitle}>
               <FaPhoneAlt style={{ marginRight: "0.5rem" }} />
@@ -81,7 +80,7 @@ const ContactMe: React.FC = () => {
               <FaEnvelope style={{ marginRight: "0.5rem" }} />
               Correo
             </h4>
-            <p>contacto@ficticio.com</p>
+            <p>martinezpaula474@gmail.com</p>
           </div>
         </SlideInFromLeft>
 
@@ -146,16 +145,6 @@ const ContactMe: React.FC = () => {
               >
                 <FaInstagram style={{ marginRight: "0.5rem" }} />
                 Instagram
-              </a>
-
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${styles.socialButton} ${styles.facebookButton}`}
-              >
-                <FaFacebook style={{ marginRight: "0.5rem" }} />
-                Facebook
               </a>
             </div>
 
