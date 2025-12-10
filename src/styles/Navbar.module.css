@@ -131,9 +131,6 @@
   height: 46px;
 }
 
-/* ================================
-   RESPONSIVE
-================================ */
 @media (max-width: 768px) {
   .container {
     justify-content: center;
