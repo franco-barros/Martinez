@@ -31,10 +31,31 @@ const ContactMe: React.FC = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert("Formulario enviado (simulación)");
-    setFormData({ name: "", email: "", message: "" });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        alert(data.error || "Error al enviar el mensaje");
+        return;
+      }
+
+      alert("Mensaje enviado correctamente ✅");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error(error);
+      alert("Error de conexión con el servidor");
+    }
   };
 
   return (
@@ -80,7 +101,7 @@ const ContactMe: React.FC = () => {
               <FaEnvelope style={{ marginRight: "0.5rem" }} />
               Correo
             </h4>
-            <p>martinezpaula474@gmail.com</p>
+            <p>paulamartinezcontadora@gmail.com</p>
           </div>
         </SlideInFromLeft>
 
@@ -138,7 +159,7 @@ const ContactMe: React.FC = () => {
 
             <div className={styles.socialButtons}>
               <a
-                href="#"
+                href="https://www.instagram.com/paulamartinez609"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${styles.socialButton} ${styles.instagramButton}`}
